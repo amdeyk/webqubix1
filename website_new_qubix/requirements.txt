@@ -1,0 +1,33 @@
+# Core FastAPI dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+jinja2==3.1.2
+python-dotenv==1.0.0
+
+# Database dependencies
+sqlalchemy==2.0.23
+alembic==1.12.1
+
+# Email and validation
+pydantic[email]==2.5.0
+pydantic-settings==2.1.0
+
+# Security and CORS
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Development dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Optional: Database drivers
+# For PostgreSQL (uncomment if needed)
+# psycopg2-binary==2.9.9
+
+# For MySQL (uncomment if needed)  
+# pymysql==1.1.0
+
+# Production server (uncomment for production)
+# gunicorn==21.2.0

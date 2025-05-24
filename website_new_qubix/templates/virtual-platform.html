@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Section 1: Virtual Platform Hero -->
+<section class="bg-gradient-to-r from-qubix-dark to-qubix-blue text-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-12 lg:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Virtual Conference Platform
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Host engaging virtual conferences with our advanced platform featuring live streaming, interactive networking, and comprehensive analytics.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#platform-demo" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+                        View Demo
+                    </a>
+                    <a href="#pricing" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-qubix-blue transition-colors text-center">
+                        See Pricing
+                    </a>
+                </div>
+                
+                <!-- Key Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">1000+</p>
+                        <p class="text-sm text-gray-200">Virtual Events Hosted</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">50K+</p>
+                        <p class="text-sm text-gray-200">Attendees Connected</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">99.9%</p>
+                        <p class="text-sm text-gray-200">Uptime Guarantee</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="{{ request.url_for('static', path='images/virtual-platform-hero.png') }}" 
+                         alt="Virtual Conference Platform" 
+                         class="rounded-lg shadow-2xl max-w-full h-auto">
+                    <!-- Play button overlay -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button onclick="openVideoModal()" 
+                                class="bg-white bg-opacity-90 text-qubix-blue w-20 h-20 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all transform hover:scale-110">
+                            <i class="fas fa-play text-2xl ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Platform Features -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Powerful Features for Virtual Events</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Everything you need to host professional virtual conferences and hybrid events
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- HD Live Streaming -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-video text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">HD Live Streaming</h3>
+                <p class="text-gray-600 mb-4">
+                    Crystal-clear HD video streaming with automatic quality adjustment based on bandwidth.
+                </p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Up to 4K resolution support</li>
+                    <li>• Multi-camera switching</li>
+                    <li>• Automatic recording</li>
+                </ul>
+            </div>
+            
+            <!-- Interactive Features -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-comments text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Interactive Engagement</h3>
+                <p class="text-gray-600 mb-4">
+                    Keep attendees engaged with polls, Q&A sessions, and real-time chat features.
+                </p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Live polls and surveys</li>
+                    <li>• Q&A moderation</li>
+                    <li>• Breakout rooms</li>
+                </ul>
+            </div>
+            
+            <!-- Virtual Networking -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Virtual Networking</h3>
+                <p class="text-gray-600 mb-4">
+                    Enable meaningful connections with virtual networking lounges and matchmaking.
+                </p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• AI-powered matchmaking</li>
+                    <li>• Video networking rooms</li>
+                    <li>• Business card exchange</li>
+                </ul>
+            </div>
+            
+            <!-- Digital Exhibitions -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-store text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Digital Exhibition Hall</h3>
+                <p class="text-gray-600 mb-4">
+                    Create immersive virtual booths for sponsors and exhibitors with rich media content.
+                </p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• 3D virtual booths</li>
+                    <li>• Document downloads</li>
+                    <li>• Lead capture forms</li>
+                </ul>
+            </div>
+            
+            <!-- Analytics Dashboard -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Analytics Dashboard</h3>
+                <p class="text-gray-600 mb-4">
+                    Comprehensive analytics and reporting to measure event success and attendee engagement.
+                </p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Real-time attendance tracking</li>
+                    <li>• Engagement metrics</li>
+                    <li>• Post-event reports</li>
+                </ul>
+            </div>
+            
+            <!-- Mobile App -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-mobile-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Mobile App</h3>
+                <p class="text-gray-600 mb-4">
+                    Native mobile apps for iOS and Android with full platform functionality.
+                </p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Cross-platform compatibility</li>
+                    <li>• Offline content access</li>
+                    <li>• Push notifications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Platform Demo -->
+<section class="py-16 bg-gray-50" id="platform-demo">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">See Our Platform in Action</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience the power of our virtual conference platform through our interactive demo
+            </p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="relative bg-white rounded-lg shadow-xl overflow-hidden">
+                <img src="{{ request.url_for('static', path='images/platform-screenshot.jpg') }}" 
+                     alt="Platform Demo" 
+                     class="w-full h-auto">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <button onclick="openDemoModal()" 
+                            class="bg-white text-qubix-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i> Start Interactive Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Pricing -->
+<section class="py-16 bg-white" id="pricing">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Flexible Pricing Options</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose the plan that fits your event size and requirements
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Starter Plan -->
+            <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-100 hover:border-qubix-blue transition-colors">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Starter</h3>
+                    <p class="text-gray-600">Perfect for small meetings</p>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold text-qubix-blue">₹50,000</span>
+                        <span class="text-gray-500">/event</span>
+                    </div>
+                </div>
+                
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Up to 100 attendees</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>HD live streaming</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Basic analytics</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Q&A and polls</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>24/7 support</li>
+                </ul>
+                
+                <button class="w-full bg-gray-200 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                    Get Started
+                </button>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-qubix-blue relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span class="bg-qubix-blue text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                </div>
+                
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Professional</h3>
+                    <p class="text-gray-600">For medium-sized conferences</p>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold text-qubix-blue">₹2,50,000</span>
+                        <span class="text-gray-500">/event</span>
+                    </div>
+                </div>
+                
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Up to 500 attendees</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>4K live streaming</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Advanced analytics</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Virtual networking</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Exhibition halls</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Mobile app</li>
+                </ul>
+                
+                <button class="w-full bg-qubix-blue text-white py-3 rounded-lg font-semibold hover:bg-qubix-dark transition-colors">
+                    Get Started
+                </button>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-100 hover:border-qubix-blue transition-colors">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Enterprise</h3>
+                    <p class="text-gray-600">For large-scale events</p>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold text-qubix-blue">₹10,00,000</span>
+                        <span class="text-gray-500">/event</span>
+                    </div>
+                </div>
+                
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Unlimited attendees</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Custom branding</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>White-label solution</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>API integration</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Dedicated support</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Custom features</li>
+                </ul>
+                
+                <button class="w-full bg-gray-200 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                    Contact Sales
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: CTA -->
+<section class="py-16 bg-qubix-blue text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Host Your Virtual Event?</h2>
+            <p class="text-xl text-gray-100 mb-8">
+                Let's discuss your virtual conference requirements and create a customized solution.
+            </p>
+            <a href="/contact" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                Schedule a Demo
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

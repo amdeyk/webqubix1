@@ -38,19 +38,19 @@
                 <!-- Metrics -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
                     <div class="text-center">
-                        <p class="text-3xl font-bold">200+</p>
+                        <p class="text-3xl font-bold stats-counter">200</p>
                         <p class="text-sm text-gray-200">Medical Conferences</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-3xl font-bold">400+</p>
+                        <p class="text-3xl font-bold stats-counter">400</p>
                         <p class="text-sm text-gray-200">Corporate Events</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-3xl font-bold">1000+</p>
+                        <p class="text-3xl font-bold stats-counter">1000</p>
                         <p class="text-sm text-gray-200">Virtual Conferences</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-3xl font-bold">50+</p>
+                        <p class="text-3xl font-bold stats-counter">50</p>
                         <p class="text-sm text-gray-200">Exhibitions</p>
                     </div>
                 </div>
@@ -59,7 +59,8 @@
             <div class="md:w-1/2 flex justify-center">
                 <img src="{{ request.url_for('static', path='images/hero-conference.png') }}" 
                      alt="Professional Conference Setup" 
-                     class="rounded-lg shadow-2xl max-w-full h-auto">
+                     class="rounded-lg shadow-2xl max-w-full h-auto"
+                     onerror="this.src='https://via.placeholder.com/600x400/2c5aa0/ffffff?text=Qubix+Events'">
             </div>
         </div>
     </div>
@@ -76,20 +77,59 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for service in featured_services %}
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img src="{{ service.image_url or request.url_for('static', path='images/service-placeholder.jpg') }}" 
-                     alt="{{ service.name }}" 
-                     class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">{{ service.name }}</h3>
-                    <p class="text-gray-600 mb-4">{{ service.short_description }}</p>
-                    <a href="/services/{{ service.slug }}" class="text-qubix-blue font-semibold hover:text-qubix-dark">
-                        Learn More →
-                    </a>
+            {% if featured_services and featured_services|length > 0 %}
+                {% for service in featured_services %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <img src="{{ service.image_url or 'https://via.placeholder.com/400x250/2c5aa0/ffffff?text=' + (service.name|replace(' ', '+')) }}" 
+                         alt="{{ service.name }}" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        {% if service.category %}
+                        <span class="bg-qubix-blue bg-opacity-10 text-qubix-blue px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">
+                            {{ service.category.name }}
+                        </span>
+                        {% endif %}
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">{{ service.name }}</h3>
+                        <p class="text-gray-600 mb-4">{{ service.short_description }}</p>
+                        {% if service.price_range %}
+                        <p class="text-qubix-blue font-semibold mb-4">{{ service.price_range }}</p>
+                        {% endif %}
+                        <a href="/services/{{ service.slug }}" class="text-qubix-blue font-semibold hover:text-qubix-dark transition-colors">
+                            Learn More →
+                        </a>
+                    </div>
                 </div>
-            </div>
-            {% endfor %}
+                {% endfor %}
+            {% else %}
+                <!-- Default services if no database data -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://via.placeholder.com/400x250/2c5aa0/ffffff?text=Conference+Management" 
+                         alt="Conference Management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Conference Management</h3>
+                        <p class="text-gray-600 mb-4">End-to-end conference planning and management services</p>
+                        <a href="/services" class="text-qubix-blue font-semibold hover:text-qubix-dark">Learn More →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://via.placeholder.com/400x250/2c5aa0/ffffff?text=Medical+Conferences" 
+                         alt="Medical Conferences" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Medical Conferences</h3>
+                        <p class="text-gray-600 mb-4">Specialized medical conference and healthcare event management</p>
+                        <a href="/services" class="text-qubix-blue font-semibold hover:text-qubix-dark">Learn More →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://via.placeholder.com/400x250/2c5aa0/ffffff?text=Virtual+Platform" 
+                         alt="Virtual Platform" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Virtual Conference Platform</h3>
+                        <p class="text-gray-600 mb-4">Advanced virtual conference platform with live streaming</p>
+                        <a href="/virtual-conference-platform" class="text-qubix-blue font-semibold hover:text-qubix-dark">Learn More →</a>
+                    </div>
+                </div>
+            {% endif %}
         </div>
         
         <div class="text-center mt-10">
@@ -112,9 +152,9 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Feature 1 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <i class="fas fa-medal text-qubix-blue text-2xl"></i>
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-medal text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">Expertise & Experience</h3>
                 <p class="text-gray-600">
@@ -123,9 +163,9 @@
             </div>
             
             <!-- Feature 2 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <i class="fas fa-users text-qubix-blue text-2xl"></i>
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-users text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">Dedicated Team</h3>
                 <p class="text-gray-600">
@@ -134,9 +174,9 @@
             </div>
             
             <!-- Feature 3 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <i class="fas fa-lightbulb text-qubix-blue text-2xl"></i>
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-lightbulb text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">Innovative Solutions</h3>
                 <p class="text-gray-600">
@@ -145,9 +185,9 @@
             </div>
             
             <!-- Feature 4 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <i class="fas fa-map-marker-alt text-qubix-blue text-2xl"></i>
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-map-marker-alt text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">Pan-India Presence</h3>
                 <p class="text-gray-600">
@@ -156,9 +196,9 @@
             </div>
             
             <!-- Feature 5 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <i class="fas fa-wallet text-qubix-blue text-2xl"></i>
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-wallet text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">Cost-Effective Solutions</h3>
                 <p class="text-gray-600">
@@ -167,9 +207,9 @@
             </div>
             
             <!-- Feature 6 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <i class="fas fa-headset text-qubix-blue text-2xl"></i>
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="service-icon mb-6">
+                    <i class="fas fa-headset text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Support</h3>
                 <p class="text-gray-600">
@@ -192,9 +232,9 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Event 1 -->
-            <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div class="relative overflow-hidden">
-                    <img src="{{ request.url_for('static', path='images/events/ezecho-2023.jpg') }}" 
+                    <img src="https://via.placeholder.com/400x250/2c5aa0/ffffff?text=EZECHO+2023" 
                          alt="EZECHO 2023" 
                          class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -206,9 +246,9 @@
             </div>
             
             <!-- Event 2 -->
-            <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div class="relative overflow-hidden">
-                    <img src="{{ request.url_for('static', path='images/events/eiicon-2023.jpg') }}" 
+                    <img src="https://via.placeholder.com/400x250/2c5aa0/ffffff?text=EIICON+2023" 
                          alt="EIICON 2023" 
                          class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -220,9 +260,9 @@
             </div>
             
             <!-- Event 3 -->
-            <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div class="relative overflow-hidden">
-                    <img src="{{ request.url_for('static', path='images/events/pcsi-2022.jpg') }}" 
+                    <img src="https://via.placeholder.com/400x250/2c5aa0/ffffff?text=PCSI+2022" 
                          alt="PCSI 2022" 
                          class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -254,7 +294,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Testimonial 1 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
                 <div class="text-yellow-400 mb-4">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -266,7 +306,7 @@
                     "Exceptional conference planning by Qubix Solutions! From conceptualization to execution, they demonstrated unmatched expertise. Their proactive approach and professionalism truly set them apart."
                 </p>
                 <div class="flex items-center">
-                    <img src="{{ request.url_for('static', path='images/testimonials/dipendra.jpg') }}" 
+                    <img src="https://via.placeholder.com/50x50/2c5aa0/ffffff?text=DP" 
                          alt="Dipendra Parihar" 
                          class="w-12 h-12 rounded-full object-cover mr-4">
                     <div>
@@ -277,7 +317,7 @@
             </div>
             
             <!-- Testimonial 2 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
                 <div class="text-yellow-400 mb-4">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -289,7 +329,7 @@
                     "Qubix Solutions orchestrated our conference flawlessly. Their innovative ideas, strategic thinking, and unwavering commitment to excellence resulted in a highly successful event. We couldn't be happier with the outcome!"
                 </p>
                 <div class="flex items-center">
-                    <img src="{{ request.url_for('static', path='images/testimonials/riya.jpg') }}" 
+                    <img src="https://via.placeholder.com/50x50/2c5aa0/ffffff?text=RK" 
                          alt="Riya Kukreja" 
                          class="w-12 h-12 rounded-full object-cover mr-4">
                     <div>
@@ -300,7 +340,7 @@
             </div>
             
             <!-- Testimonial 3 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
                 <div class="text-yellow-400 mb-4">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -312,7 +352,7 @@
                     "Qubix Solutions exceeded our expectations in conference planning. Their meticulous attention to detail ensured a seamless event. Impressive teamwork and flawless execution. Highly recommended!"
                 </p>
                 <div class="flex items-center">
-                    <img src="{{ request.url_for('static', path='images/testimonials/mayank.jpg') }}" 
+                    <img src="https://via.placeholder.com/50x50/2c5aa0/ffffff?text=MR" 
                          alt="Mayank Rawat" 
                          class="w-12 h-12 rounded-full object-cover mr-4">
                     <div>
@@ -339,4 +379,86 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Initialize categories safely - using the pre-converted dictionary data
+let categories = [];
+try {
+    {% if categories %}
+        categories = {{ categories | tojson | safe }};
+        console.log('✓ Categories loaded:', categories.length, 'items');
+    {% else %}
+        categories = [];
+        console.log('⚠️ No categories available');
+    {% endif %}
+} catch (error) {
+    console.error('❌ Error loading categories:', error);
+    categories = [];
+}
+
+// Initialize featured services safely  
+let featuredServices = [];
+try {
+    {% if featured_services_json %}
+        featuredServices = {{ featured_services_json | tojson | safe }};
+        console.log('✓ Featured services loaded:', featuredServices.length, 'items');
+    {% else %}
+        featuredServices = [];
+        console.log('⚠️ No featured services available');
+    {% endif %}
+} catch (error) {
+    console.error('❌ Error loading featured services:', error);
+    featuredServices = [];
+}
+
+// Initialize page functionality
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🏠 Qubix Events homepage loaded successfully');
+    console.log('📊 Data summary:', {
+        categories: categories.length,
+        featuredServices: featuredServices.length,
+        title: '{{ title }}'
+    });
+    
+    // Initialize any homepage-specific functionality here
+    initializeCounters();
+});
+
+// Initialize counter animations
+function initializeCounters() {
+    const counters = document.querySelectorAll('.stats-counter');
+    console.log('🔢 Initializing', counters.length, 'counters');
+    
+    // Simple counter animation
+    counters.forEach(counter => {
+        const target = parseInt(counter.textContent);
+        let current = 0;
+        const increment = target / 50; // Animation speed
+        
+        const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        
+        // Start animation when element is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        
+        observer.observe(counter);
+    });
+}
+</script>
 {% endblock %}

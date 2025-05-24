@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <!-- 404 Illustration -->
+            <div class="mb-8">
+                <h1 class="text-8xl font-bold text-qubix-blue mb-4">404</h1>
+                <div class="w-32 h-32 bg-qubix-blue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-search text-qubix-blue text-4xl"></i>
+                </div>
+            </div>
+            
+            <!-- Error Message -->
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Page Not Found</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                The page you're looking for doesn't exist or has been moved. 
+                Let's help you find what you need.
+            </p>
+            
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                <a href="/" class="bg-qubix-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-qubix-dark transition-colors">
+                    Go to Homepage
+                </a>
+                <a href="/services" class="border-2 border-qubix-blue text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-qubix-blue hover:text-white transition-colors">
+                    View Services
+                </a>
+            </div>
+            
+            <!-- Popular Links -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-6">Popular Pages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="/services/conference-planning" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fas fa-users text-qubix-blue mr-3"></i>
+                        <span>Conference Planning</span>
+                    </a>
+                    <a href="/services/medical-conferences" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fas fa-user-md text-qubix-blue mr-3"></i>
+                        <span>Medical Conferences</span>
+                    </a>
+                    <a href="/virtual-conference-platform" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fas fa-laptop text-qubix-blue mr-3"></i>
+                        <span>Virtual Platform</span>
+                    </a>
+                    <a href="/contact" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fas fa-envelope text-qubix-blue mr-3"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
