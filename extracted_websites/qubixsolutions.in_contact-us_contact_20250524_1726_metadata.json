@@ -1,0 +1,15 @@
+{
+  "url": "https://qubixsolutions.in/contact-us/",
+  "status_code": 200,
+  "title": "Contact Us - Online Conference Planning & Management",
+  "description": null,
+  "keywords": null,
+  "detected_interactive_elements": [
+    "menus",
+    "infinite_scroll"
+  ],
+  "has_javascript": true,
+  "extraction_method": "interactive_crawl4ai",
+  "success": true,
+  "content_length": 3293
+}
