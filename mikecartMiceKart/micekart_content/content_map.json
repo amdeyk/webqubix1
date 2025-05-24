@@ -1,0 +1,1202 @@
+{
+  "https://micekart.com/eventList": {
+    "title": "Micekart",
+    "file_path": "micekart_content\\pages\\eventList.json"
+  },
+  "https://micekart.com/benefits": {
+    "title": "Benefits of MICE Services | Boost Your Events – MICEkart",
+    "file_path": "micekart_content\\pages\\benefits.json"
+  },
+  "https://micekart.com/about": {
+    "title": "About Us | Leading MICE Company in India – MICEkart",
+    "file_path": "micekart_content\\pages\\about.json"
+  },
+  "https://micekart.com/contact": {
+    "title": "Contact MICE Experts | MICE & Events Solutions – MICEkart",
+    "file_path": "micekart_content\\pages\\contact.json"
+  },
+  "https://micekart.com/": {
+    "title": "Top MICE Company in India | Event Planners – MICEkart",
+    "file_path": "micekart_content\\pages\\index.json"
+  },
+  "https://micekart.com/home": {
+    "title": "Top MICE Company in India | Event Planners – MICEkart",
+    "file_path": "micekart_content\\pages\\home.json"
+  },
+  "https://micekart.com/static/media/Benifits%20for%20Client.f5260d01.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Benifits_20for_20Client_f5260d01_pdf.json"
+  },
+  "https://micekart.com/static/media/Benifits%20for%20Partners.bc33254a.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Benifits_20for_20Partners_bc33254a_pdf.json"
+  },
+  "https://micekart.com/static/media/Micekart-The-Idea-new.78c542ff.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Micekart_The_Idea_new_78c542ff_pdf.json"
+  },
+  "https://micekart.com/websiteuserpolicy": {
+    "title": "Website User Policy | Terms & Conditions – MICEkart",
+    "file_path": "micekart_content\\pages\\websiteuserpolicy.json"
+  },
+  "https://micekart.com/static/media/MICEkart-Client-Profile.35843043.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_MICEkart_Client_Profile_35843043_pdf.json"
+  },
+  "https://micekart.com/termsofuse": {
+    "title": "Terms of Service | MICE & Events – MICEkart",
+    "file_path": "micekart_content\\pages\\termsofuse.json"
+  },
+  "https://micekart.com/cookiepolicy": {
+    "title": "Cookie Policy for MICE Services in India | MICEkart",
+    "file_path": "micekart_content\\pages\\cookiepolicy.json"
+  },
+  "https://micekart.com/privacypolicy": {
+    "title": "Privacy Policy | MICE Services & Event Planning – MICEkart",
+    "file_path": "micekart_content\\pages\\privacypolicy.json"
+  },
+  "https://micekart.com/hoteltermsandcondition": {
+    "title": "Micekart",
+    "file_path": "micekart_content\\pages\\hoteltermsandcondition.json"
+  },
+  "https://micekart.com/EventsTerms": {
+    "title": "Event Terms & Conditions | Corporate MICE Services – MICEkart",
+    "file_path": "micekart_content\\pages\\EventsTerms.json"
+  },
+  "https://micekart.com/mice-packages/Singapore/internationalpackagesingapore/MzA=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_Singapore_internationalpackagesingapore_MzA_.json"
+  },
+  "https://micekart.com/mice-packages/Thailand/internationalpackagethailand/MzI=": {
+    "title": "Thailand - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_Thailand_internationalpackagethailand_MzI_.json"
+  },
+  "https://micekart.com/static/media/Team%20Building.80a92dc5.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Team_20Building_80a92dc5_pdf.json"
+  },
+  "https://micekart.com/mice-packages/Dubai/internationalpackagedubai/MzQ=": {
+    "title": "Dubai - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_Dubai_internationalpackagedubai_MzQ_.json"
+  },
+  "https://micekart.com/static/media/Artiste%20terms%20and%20conditions.ebfeadcf.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Artiste_20terms_20and_20conditions_ebfeadcf_pdf.json"
+  },
+  "https://micekart.com/mice-packages/Sri%20Lanka/internationalpackagesrilanka/OTI=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_Sri_20Lanka_internationalpackagesrilanka_OTI_.json"
+  },
+  "https://micekart.com/mice-packages/India/domesticpackagedelhiandagra/MjA=": {
+    "title": "Delhi and Agra - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_domesticpackagedelhiandagra_MjA_.json"
+  },
+  "https://micekart.com/mice-packages/India/kochiallepeycorporatetourpacka/Mzg=": {
+    "title": "Kochi & Alleppey - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_kochiallepeycorporatetourpacka_Mzg_.json"
+  },
+  "https://micekart.com/mice-packages/India/goacorporatetourpackage/NzA=": {
+    "title": "Goa - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_goacorporatetourpackage_NzA_.json"
+  },
+  "https://micekart.com/mice-packages/India/JODHPURCPORPORTETOURPACKAGE/NTM=": {
+    "title": "Jodhpur - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_JODHPURCPORPORTETOURPACKAGE_NTM_.json"
+  },
+  "https://micekart.com/mice-packages/India/SRINAGARcorportetourpackage/NjU=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_India_SRINAGARcorportetourpackage_NjU_.json"
+  },
+  "https://micekart.com/mice-packages/India/domesticpackageranthambore/MjQ=": {
+    "title": "Ranthambore - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_domesticpackageranthambore_MjQ_.json"
+  },
+  "https://micekart.com/mice-packages/India/domesticpackageudaipur/MTg=": {
+    "title": "Udaipur - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_domesticpackageudaipur_MTg_.json"
+  },
+  "https://micekart.com/mice-packages/India/Lonavalacorporatetourpackage/NDE=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_India_Lonavalacorporatetourpackage_NDE_.json"
+  },
+  "https://www.blog.micekart.com/why-digital-mice-platforms-are-the-future/": {
+    "title": "Why Digital MICE Platforms Are the Future",
+    "file_path": "micekart_content\\pages\\why_digital_mice_platforms_are_the_future.json"
+  },
+  "https://www.blog.micekart.com/5-proven-ways-to-increase-leads-for-your-team-building-company/": {
+    "title": "5 Proven Ways to Increase Leads for Team Building Companies",
+    "file_path": "micekart_content\\pages\\5_proven_ways_to_increase_leads_for_your_team_building_company.json"
+  },
+  "https://www.blog.micekart.com/how-mice-services-elevate-corporate-travel-incentive-programs/": {
+    "title": "How MICE Services Elevate Corporate Travel & Incentive Programs - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\how_mice_services_elevate_corporate_travel_incentive_programs.json"
+  },
+  "https://www.blog.micekart.com/conference-planning-made-easy-end-to-end-event-solutions-for-businesses/": {
+    "title": "Conference Planning Made Easy: End-to-End Event Solutions for Businesses - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\conference_planning_made_easy_end_to_end_event_solutions_for_businesses.json"
+  },
+  "https://www.blog.micekart.com/why-professional-hotel-and-venue-management-is-crucial-for-corporate-events/": {
+    "title": "Why Professional Hotel and Venue Management is Crucial for Corporate Events - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\why_professional_hotel_and_venue_management_is_crucial_for_corporate_events.json"
+  },
+  "https://www.blog.micekart.com/goa-city-of-beaches/": {
+    "title": "Goa City of Beaches - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\goa_city_of_beaches.json"
+  },
+  "https://www.blog.micekart.com/hanoi-vietnam-city-of-lakes/": {
+    "title": "Hanoi Vietnam City of Lakes - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\hanoi_vietnam_city_of_lakes.json"
+  },
+  "https://www.blog.micekart.com/jaipur-the-blue-city/": {
+    "title": "Jaipur The Blue City - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\jaipur_the_blue_city.json"
+  },
+  "https://www.blog.micekart.com/corporate-sales-incentive-trips-jaipur-self-drive-suvs-adventures-overland/": {
+    "title": "Corporate Sales Incentive Trips Jaipur - Self Drive SUVs - Adventures Overland - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_sales_incentive_trips_jaipur_self_drive_suvs_adventures_overland.json"
+  },
+  "https://micekart.com/www.micekart.com": {
+    "title": "Micekart",
+    "file_path": "micekart_content\\pages\\www_micekart_com.json"
+  },
+  "https://www.blog.micekart.com/corporate-team-building-for-csr/": {
+    "title": "Corporate Team Building for CSR - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_team_building_for_csr.json"
+  },
+  "https://www.blog.micekart.com/why-digital-mice-platforms-are-the-future/#main": {
+    "title": "Why Digital MICE Platforms Are the Future",
+    "file_path": "micekart_content\\pages\\why_digital_mice_platforms_are_the_future.json"
+  },
+  "https://www.micekart.com/about": {
+    "title": "About Us | Leading MICE Company in India – MICEkart",
+    "file_path": "micekart_content\\pages\\about.json"
+  },
+  "https://www.blog.micekart.com/": {
+    "title": "MiceKart Blogs -",
+    "file_path": "micekart_content\\pages\\index.json"
+  },
+  "https://www.micekart.com/testimonials": {
+    "title": "Client Testimonials | Trusted MICE Services – MICEkart",
+    "file_path": "micekart_content\\pages\\testimonials.json"
+  },
+  "https://www.micekart.com/benefits": {
+    "title": "Benefits of MICE Services | Boost Your Events – MICEkart",
+    "file_path": "micekart_content\\pages\\benefits.json"
+  },
+  "https://www.micekart.com/contact": {
+    "title": "Contact MICE Experts | MICE & Events Solutions – MICEkart",
+    "file_path": "micekart_content\\pages\\contact.json"
+  },
+  "https://www.blog.micekart.com/category/blog/": {
+    "title": "Blog Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_blog.json"
+  },
+  "https://www.blog.micekart.com/category/mice-solution/": {
+    "title": "MICE Solution Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_mice_solution.json"
+  },
+  "https://www.micekart.com/partners": {
+    "title": "Micekart",
+    "file_path": "micekart_content\\pages\\partners.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/": {
+    "title": "Vincent, Author at MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\author_vincent.json"
+  },
+  "https://www.blog.micekart.com/why-digital-mice-platforms-are-the-future/#respond": {
+    "title": "Why Digital MICE Platforms Are the Future",
+    "file_path": "micekart_content\\pages\\why_digital_mice_platforms_are_the_future.json"
+  },
+  "https://www.blog.micekart.com/2025/05/": {
+    "title": "May 2025 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2025_05.json"
+  },
+  "https://www.blog.micekart.com/2025/04/": {
+    "title": "April 2025 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2025_04.json"
+  },
+  "https://www.blog.micekart.com/2022/01/": {
+    "title": "January 2022 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2022_01.json"
+  },
+  "https://www.blog.micekart.com/2025/03/": {
+    "title": "March 2025 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2025_03.json"
+  },
+  "https://www.blog.micekart.com/2023/03/": {
+    "title": "March 2023 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2023_03.json"
+  },
+  "https://www.blog.micekart.com/2021/10/": {
+    "title": "October 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_10.json"
+  },
+  "https://www.blog.micekart.com/2021/12/": {
+    "title": "December 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_12.json"
+  },
+  "https://www.blog.micekart.com/2021/08/": {
+    "title": "August 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_08.json"
+  },
+  "https://www.blog.micekart.com/2021/01/": {
+    "title": "January 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_01.json"
+  },
+  "https://www.blog.micekart.com/2021/03/": {
+    "title": "March 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_03.json"
+  },
+  "https://www.blog.micekart.com/2020/12/": {
+    "title": "December 2020 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_12.json"
+  },
+  "https://www.blog.micekart.com/2020/11/": {
+    "title": "November 2020 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_11.json"
+  },
+  "https://www.blog.micekart.com/2020/10/": {
+    "title": "October 2020 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_10.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-event-theme/": {
+    "title": "Corporate Event Theme Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_event_theme.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-gifting/": {
+    "title": "Corporate Gifting Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_gifting.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-team-building/": {
+    "title": "Corporate Team Building Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_team_building.json"
+  },
+  "https://www.blog.micekart.com/category/mice-hotel/": {
+    "title": "MICE Hotel Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_mice_hotel.json"
+  },
+  "https://www.blog.micekart.com/category/incentive-packages/": {
+    "title": "Incentive Packages Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_incentive_packages.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-bangalore/": {
+    "title": "MICE companies in Bangalore - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_bangalore.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-delhi/": {
+    "title": "MICE companies in Delhi - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_delhi.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-hyderabad/": {
+    "title": "MICE companies in Hyderabad - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_hyderabad.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-mumbai/": {
+    "title": "MICE Companies in Mumbai - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_mumbai.json"
+  },
+  "https://www.blog.micekart.com/5-proven-ways-to-increase-leads-for-your-team-building-company/#main": {
+    "title": "5 Proven Ways to Increase Leads for Team Building Companies",
+    "file_path": "micekart_content\\pages\\5_proven_ways_to_increase_leads_for_your_team_building_company.json"
+  },
+  "https://www.micekart.com/": {
+    "title": "Top MICE Company in India | Event Planners – MICEkart",
+    "file_path": "micekart_content\\pages\\index.json"
+  },
+  "https://www.blog.micekart.com/5-proven-ways-to-increase-leads-for-your-team-building-company/#respond": {
+    "title": "5 Proven Ways to Increase Leads for Team Building Companies",
+    "file_path": "micekart_content\\pages\\5_proven_ways_to_increase_leads_for_your_team_building_company.json"
+  },
+  "https://www.blog.micekart.com/how-mice-services-elevate-corporate-travel-incentive-programs/#main": {
+    "title": "How MICE Services Elevate Corporate Travel & Incentive Programs - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\how_mice_services_elevate_corporate_travel_incentive_programs.json"
+  },
+  "https://www.blog.micekart.com/how-mice-services-elevate-corporate-travel-incentive-programs/#respond": {
+    "title": "How MICE Services Elevate Corporate Travel & Incentive Programs - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\how_mice_services_elevate_corporate_travel_incentive_programs.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-gurgaon/": {
+    "title": "MICE Companies in Gurgaon - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_gurgaon.json"
+  },
+  "https://www.blog.micekart.com/conference-planning-made-easy-end-to-end-event-solutions-for-businesses/#respond": {
+    "title": "Conference Planning Made Easy: End-to-End Event Solutions for Businesses - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\conference_planning_made_easy_end_to_end_event_solutions_for_businesses.json"
+  },
+  "https://www.blog.micekart.com/conference-planning-made-easy-end-to-end-event-solutions-for-businesses/#main": {
+    "title": "Conference Planning Made Easy: End-to-End Event Solutions for Businesses - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\conference_planning_made_easy_end_to_end_event_solutions_for_businesses.json"
+  },
+  "https://www.blog.micekart.com/why-professional-hotel-and-venue-management-is-crucial-for-corporate-events/#main": {
+    "title": "Why Professional Hotel and Venue Management is Crucial for Corporate Events - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\why_professional_hotel_and_venue_management_is_crucial_for_corporate_events.json"
+  },
+  "https://www.blog.micekart.com/why-professional-hotel-and-venue-management-is-crucial-for-corporate-events/#respond": {
+    "title": "Why Professional Hotel and Venue Management is Crucial for Corporate Events - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\why_professional_hotel_and_venue_management_is_crucial_for_corporate_events.json"
+  },
+  "https://www.blog.micekart.com/goa-city-of-beaches/#main": {
+    "title": "Goa City of Beaches - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\goa_city_of_beaches.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2023/03/2023-MK-Product-PPT-Goa-3.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2023_03_2023_MK_Product_PPT_Goa_3_pdf.json"
+  },
+  "https://www.blog.micekart.com/hanoi-vietnam-city-of-lakes/#main": {
+    "title": "Hanoi Vietnam City of Lakes - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\hanoi_vietnam_city_of_lakes.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2023/03/2023-MK-Product-PPT-Hanoi-Vietnam-2.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2023_03_2023_MK_Product_PPT_Hanoi_Vietnam_2_pdf.json"
+  },
+  "https://www.blog.micekart.com/jaipur-the-blue-city/#main": {
+    "title": "Jaipur The Blue City - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\jaipur_the_blue_city.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2023/03/Approved-MK-Product-PPT-Jodhpur-2.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2023_03_Approved_MK_Product_PPT_Jodhpur_2_pdf.json"
+  },
+  "https://www.blog.micekart.com/corporate-sales-incentive-trips-jaipur-self-drive-suvs-adventures-overland/#main": {
+    "title": "Corporate Sales Incentive Trips Jaipur - Self Drive SUVs - Adventures Overland - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_sales_incentive_trips_jaipur_self_drive_suvs_adventures_overland.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2022/01/Corporate-Jaipur-Udaipur-Incentive-Trip.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2022_01_Corporate_Jaipur_Udaipur_Incentive_Trip_pdf.json"
+  },
+  "https://www.blog.micekart.com/corporate-team-building-for-csr/#main": {
+    "title": "Corporate Team Building for CSR - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_team_building_for_csr.json"
+  },
+  "https://www.micekart.com/home": {
+    "title": "Top MICE Company in India | Event Planners – MICEkart",
+    "file_path": "micekart_content\\pages\\home.json"
+  },
+  "https://www.blog.micekart.com/corporate-event-in-jodhpur/": {
+    "title": "M.I.C.E in Jodhpur - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_event_in_jodhpur.json"
+  },
+  "https://www.micekart.com/static/media/Benifits%20for%20Client.f5260d01.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Benifits_20for_20Client_f5260d01_pdf.json"
+  },
+  "https://www.micekart.com/static/media/Benifits%20for%20Partners.bc33254a.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Benifits_20for_20Partners_bc33254a_pdf.json"
+  },
+  "https://www.micekart.com/static/media/Micekart-The-Idea-new.78c542ff.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Micekart_The_Idea_new_78c542ff_pdf.json"
+  },
+  "https://www.micekart.com/websiteuserpolicy": {
+    "title": "Website User Policy | Terms & Conditions – MICEkart",
+    "file_path": "micekart_content\\pages\\websiteuserpolicy.json"
+  },
+  "https://www.micekart.com/termsofuse": {
+    "title": "Terms of Service | MICE & Events – MICEkart",
+    "file_path": "micekart_content\\pages\\termsofuse.json"
+  },
+  "https://www.micekart.com/cookiepolicy": {
+    "title": "Cookie Policy for MICE Services in India | MICEkart",
+    "file_path": "micekart_content\\pages\\cookiepolicy.json"
+  },
+  "https://www.micekart.com/static/media/MICEkart-Client-Profile.35843043.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_MICEkart_Client_Profile_35843043_pdf.json"
+  },
+  "https://www.micekart.com/privacypolicy": {
+    "title": "Privacy Policy | MICE Services & Event Planning – MICEkart",
+    "file_path": "micekart_content\\pages\\privacypolicy.json"
+  },
+  "https://www.micekart.com/hoteltermsandcondition": {
+    "title": "Micekart",
+    "file_path": "micekart_content\\pages\\hoteltermsandcondition.json"
+  },
+  "https://www.micekart.com/EventsTerms": {
+    "title": "Event Terms & Conditions | Corporate MICE Services – MICEkart",
+    "file_path": "micekart_content\\pages\\EventsTerms.json"
+  },
+  "https://www.micekart.com/static/media/Artiste%20terms%20and%20conditions.ebfeadcf.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Artiste_20terms_20and_20conditions_ebfeadcf_pdf.json"
+  },
+  "https://www.micekart.com/static/media/Team%20Building.80a92dc5.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Team_20Building_80a92dc5_pdf.json"
+  },
+  "https://www.blog.micekart.com/page/2/": {
+    "title": "MiceKart Blogs - Page 2 of 6 -",
+    "file_path": "micekart_content\\pages\\page_2.json"
+  },
+  "https://www.blog.micekart.com/#main": {
+    "title": "MiceKart Blogs -",
+    "file_path": "micekart_content\\pages\\index.json"
+  },
+  "https://www.blog.micekart.com/page/3/": {
+    "title": "MiceKart Blogs - Page 3 of 6 -",
+    "file_path": "micekart_content\\pages\\page_3.json"
+  },
+  "https://www.blog.micekart.com/category/blog/#main": {
+    "title": "Blog Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_blog.json"
+  },
+  "https://www.blog.micekart.com/page/6/": {
+    "title": "MiceKart Blogs - Page 6 of 6 -",
+    "file_path": "micekart_content\\pages\\page_6.json"
+  },
+  "https://www.blog.micekart.com/corporate-event-in-cordelia-cruise/": {
+    "title": "Corporate Event in Cordelia Cruise - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_event_in_cordelia_cruise.json"
+  },
+  "https://www.blog.micekart.com/category/blog/page/2/": {
+    "title": "Blog Archives - Page 2 of 3 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_blog_page_2.json"
+  },
+  "https://www.blog.micekart.com/category/blog/page/3/": {
+    "title": "Blog Archives - Page 3 of 3 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_blog_page_3.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/#main": {
+    "title": "Vincent, Author at MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\author_vincent.json"
+  },
+  "https://www.blog.micekart.com/category/mice-solution/#main": {
+    "title": "MICE Solution Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_mice_solution.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/2/": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 2 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_2.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/6/": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 6 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_6.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/3/": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 3 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_3.json"
+  },
+  "https://www.blog.micekart.com/2025/05/#main": {
+    "title": "May 2025 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2025_05.json"
+  },
+  "https://www.blog.micekart.com/2022/01/#main": {
+    "title": "January 2022 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2022_01.json"
+  },
+  "https://www.blog.micekart.com/2025/03/#main": {
+    "title": "March 2025 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2025_03.json"
+  },
+  "https://www.blog.micekart.com/2023/03/#main": {
+    "title": "March 2023 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2023_03.json"
+  },
+  "https://www.blog.micekart.com/2021/10/#main": {
+    "title": "October 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_10.json"
+  },
+  "https://www.blog.micekart.com/2025/04/#main": {
+    "title": "April 2025 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2025_04.json"
+  },
+  "https://www.blog.micekart.com/if-its-m-i-c-e-travel-then-got-it-all-at-micekart-com/": {
+    "title": "If it’s M.I.C.E Travel, then we’ve got all it at MICEkart.com - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\if_its_m_i_c_e_travel_then_got_it_all_at_micekart_com.json"
+  },
+  "https://www.blog.micekart.com/2021/12/#main": {
+    "title": "December 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_12.json"
+  },
+  "https://www.blog.micekart.com/2021/08/#main": {
+    "title": "August 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_08.json"
+  },
+  "https://www.blog.micekart.com/mice-hotel-booking-solution/": {
+    "title": "MICE Hotel Booking Solution - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_hotel_booking_solution.json"
+  },
+  "https://www.blog.micekart.com/2021/01/#main": {
+    "title": "January 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_01.json"
+  },
+  "https://www.blog.micekart.com/corporate-virtual-event-solutions/": {
+    "title": "Corporate Virtual Event Solutions - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_virtual_event_solutions.json"
+  },
+  "https://www.blog.micekart.com/mysterious-fridays/": {
+    "title": "Mysterious Fridays - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mysterious_fridays.json"
+  },
+  "https://www.blog.micekart.com/morning-rush/": {
+    "title": "Morning Rush - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\morning_rush.json"
+  },
+  "https://www.blog.micekart.com/secret-of-life/": {
+    "title": "Secret of Life - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\secret_of_life.json"
+  },
+  "https://www.blog.micekart.com/friday-funday/": {
+    "title": "Friday Funday - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\friday_funday.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-event-north/": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event North - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_event_north.json"
+  },
+  "https://www.blog.micekart.com/b-creative/": {
+    "title": "B-Creative - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\b_creative.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-event-east/": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event East - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_event_east.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-event-south/": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event South - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_event_south.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-corporate-event/": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event West - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_corporate_event.json"
+  },
+  "https://www.blog.micekart.com/top-40-pillar-less-banquets-for-corporate-events/": {
+    "title": "Top 40 Pillar-Less Banquets For Corporate Events - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_40_pillar_less_banquets_for_corporate_events.json"
+  },
+  "https://www.blog.micekart.com/2021/03/#main": {
+    "title": "March 2021 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2021_03.json"
+  },
+  "https://www.blog.micekart.com/future-of-corporate-gifting/": {
+    "title": "Future of Corporate Gifting - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\future_of_corporate_gifting.json"
+  },
+  "https://www.blog.micekart.com/importance-of-team-building-activities-in-the-new-normal/": {
+    "title": "Importance of Team building activities in the new normal - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\importance_of_team_building_activities_in_the_new_normal.json"
+  },
+  "https://www.blog.micekart.com/top-5-employee-engagement-activities-in-the-wfh-scenario/": {
+    "title": "Top 5 employee engagement activities in the WFH scenario - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_employee_engagement_activities_in_the_wfh_scenario.json"
+  },
+  "https://www.blog.micekart.com/2020/12/#main": {
+    "title": "December 2020 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_12.json"
+  },
+  "https://www.blog.micekart.com/winter-wear-specials/": {
+    "title": "Winter – Wear Specials - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\winter_wear_specials.json"
+  },
+  "https://www.blog.micekart.com/new-year-gifting/": {
+    "title": "New Year Gifting - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\new_year_gifting.json"
+  },
+  "https://www.blog.micekart.com/10-essential-work-from-home-accessories/": {
+    "title": "10 essential Work from home accessories - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\10_essential_work_from_home_accessories.json"
+  },
+  "https://www.blog.micekart.com/festive-gifting/": {
+    "title": "Festive Gifting - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\festive_gifting.json"
+  },
+  "https://www.blog.micekart.com/health-and-fitness/": {
+    "title": "Health and Fitness - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\health_and_fitness.json"
+  },
+  "https://www.blog.micekart.com/team-building-program/": {
+    "title": "Team Building Program - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\team_building_program.json"
+  },
+  "https://www.blog.micekart.com/2020/11/#main": {
+    "title": "November 2020 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_11.json"
+  },
+  "https://www.blog.micekart.com/trophies-awards/": {
+    "title": "Trophies and Awards - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\trophies_awards.json"
+  },
+  "https://www.blog.micekart.com/gift-vouchers/": {
+    "title": "Gift Vouchers - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\gift_vouchers.json"
+  },
+  "https://www.blog.micekart.com/virtual-reward-and-recognition-programe/": {
+    "title": "Virtual Reward and Recognition Programe - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\virtual_reward_and_recognition_programe.json"
+  },
+  "https://www.blog.micekart.com/micekart-specialized-themes/": {
+    "title": "MICEkart Specialized Themes - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\micekart_specialized_themes.json"
+  },
+  "https://www.blog.micekart.com/2020/10/#main": {
+    "title": "October 2020 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_10.json"
+  },
+  "https://www.blog.micekart.com/unique-gifting-ideas-to-reward-the-gifted/": {
+    "title": "Unique gifting ideas to reward the gifted - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\unique_gifting_ideas_to_reward_the_gifted.json"
+  },
+  "https://www.blog.micekart.com/top-5-resorts-to-experience-snow/": {
+    "title": "Top 5 Resorts to Experience Snow - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_resorts_to_experience_snow.json"
+  },
+  "https://www.blog.micekart.com/top-5-desert-destinations-for-mice/": {
+    "title": "Top 5 Desert Destinations for MICE - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_desert_destinations_for_mice.json"
+  },
+  "https://www.blog.micekart.com/top-5-destinations-for-heritage-tourism/": {
+    "title": "Top 5 Destinations for Heritage Tourism - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_destinations_for_heritage_tourism.json"
+  },
+  "https://www.blog.micekart.com/top-5-budget-international-destination/": {
+    "title": "Top 5 Budget International Destination - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_budget_international_destination.json"
+  },
+  "https://www.blog.micekart.com/unique-corporate-gifting-ideas-for-employee-incentivization/": {
+    "title": "Unique Corporate Gifting Ideas - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\unique_corporate_gifting_ideas_for_employee_incentivization.json"
+  },
+  "https://www.blog.micekart.com/virtual-team-building-do-you-know-your-company/": {
+    "title": "Virtual Team Building Know Your Company - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\virtual_team_building_do_you_know_your_company.json"
+  },
+  "https://www.blog.micekart.com/know-your-team-virtual-team-building/": {
+    "title": "Know Your Team Virtual Team Building - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\know_your_team_virtual_team_building.json"
+  },
+  "https://www.blog.micekart.com/league-of-corporate-legends/": {
+    "title": "League of Corporate Legends - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\league_of_corporate_legends.json"
+  },
+  "https://www.blog.micekart.com/182/": {
+    "title": "HNI Client Engagement - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\182.json"
+  },
+  "https://www.blog.micekart.com/2020/10/page/2/": {
+    "title": "October 2020 - Page 2 of 2 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_10_page_2.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-event-theme/#main": {
+    "title": "Corporate Event Theme Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_event_theme.json"
+  },
+  "https://www.blog.micekart.com/event-blog-footer-4/": {
+    "title": "Top 5 Festivals To Plan Your Next Offsite - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\event_blog_footer_4.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-gifting/#main": {
+    "title": "Corporate Gifting Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_gifting.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-team-building/#main": {
+    "title": "Corporate Team Building Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_team_building.json"
+  },
+  "https://www.blog.micekart.com/corporate-diwali-gifting-ideas/": {
+    "title": "Corporate Diwali Gifting Ideas - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_diwali_gifting_ideas.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-team-building/page/2/": {
+    "title": "Corporate Team Building Archives - Page 2 of 2 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_team_building_page_2.json"
+  },
+  "https://www.blog.micekart.com/category/incentive-packages/#main": {
+    "title": "Incentive Packages Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_incentive_packages.json"
+  },
+  "https://www.blog.micekart.com/category/mice-hotel/#main": {
+    "title": "MICE Hotel Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_mice_hotel.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-bangalore/#main": {
+    "title": "MICE companies in Bangalore - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_bangalore.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-delhi/#main": {
+    "title": "MICE companies in Delhi - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_delhi.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-hyderabad/#main": {
+    "title": "MICE companies in Hyderabad - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_hyderabad.json"
+  },
+  "https://www.micekart.com/mice-packages/Thailand/internationalpackagethailand/MzI=": {
+    "title": "Thailand - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_Thailand_internationalpackagethailand_MzI_.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-mumbai/#main": {
+    "title": "MICE Companies in Mumbai - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_mumbai.json"
+  },
+  "https://www.micekart.com/mice-packages/Singapore/internationalpackagesingapore/MzA=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_Singapore_internationalpackagesingapore_MzA_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/domesticpackagedelhiandagra/MjA=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_India_domesticpackagedelhiandagra_MjA_.json"
+  },
+  "https://www.micekart.com/mice-packages/Sri%20Lanka/internationalpackagesrilanka/OTI=": {
+    "title": "Sri Lanka - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_Sri_20Lanka_internationalpackagesrilanka_OTI_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/JODHPURCPORPORTETOURPACKAGE/NTM=": {
+    "title": "Jodhpur - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_JODHPURCPORPORTETOURPACKAGE_NTM_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/kochiallepeycorporatetourpacka/Mzg=": {
+    "title": "Kochi & Alleppey - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_kochiallepeycorporatetourpacka_Mzg_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/goacorporatetourpackage/NzA=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_India_goacorporatetourpackage_NzA_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/SRINAGARcorportetourpackage/NjU=": {
+    "title": "Srinagar - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_SRINAGARcorportetourpackage_NjU_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/domesticpackageranthambore/MjQ=": {
+    "title": "Ranthambore - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_domesticpackageranthambore_MjQ_.json"
+  },
+  "https://www.micekart.com/mice-packages/Dubai/internationalpackagedubai/MzQ=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_Dubai_internationalpackagedubai_MzQ_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/domesticpackageudaipur/MTg=": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_packages_India_domesticpackageudaipur_MTg_.json"
+  },
+  "https://www.micekart.com/mice-packages/India/Lonavalacorporatetourpackage/NDE=": {
+    "title": "Lonavala - MICE Packages - MICEkart",
+    "file_path": "micekart_content\\pages\\mice_packages_India_Lonavalacorporatetourpackage_NDE_.json"
+  },
+  "https://www.blog.micekart.com/mice-companies-in-gurgaon/#main": {
+    "title": "MICE Companies in Gurgaon - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_companies_in_gurgaon.json"
+  },
+  "https://www.micekart.com/www.micekart.com": {
+    "title": "Micekart",
+    "file_path": "micekart_content\\pages\\www_micekart_com.json"
+  },
+  "https://www.blog.micekart.com/corporate-event-in-jodhpur/#main": {
+    "title": "M.I.C.E in Jodhpur - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_event_in_jodhpur.json"
+  },
+  "https://www.blog.micekart.com/page/2/#main": {
+    "title": "MiceKart Blogs - Page 2 of 6 -",
+    "file_path": "micekart_content\\pages\\page_2.json"
+  },
+  "https://www.blog.micekart.com/page/3/#main": {
+    "title": "MiceKart Blogs - Page 3 of 6 -",
+    "file_path": "micekart_content\\pages\\page_3.json"
+  },
+  "https://www.blog.micekart.com/page/5/": {
+    "title": "MiceKart Blogs - Page 5 of 6 -",
+    "file_path": "micekart_content\\pages\\page_5.json"
+  },
+  "https://www.blog.micekart.com/page/4/": {
+    "title": "MiceKart Blogs - Page 4 of 6 -",
+    "file_path": "micekart_content\\pages\\page_4.json"
+  },
+  "https://www.blog.micekart.com/page/6/#main": {
+    "title": "MiceKart Blogs - Page 6 of 6 -",
+    "file_path": "micekart_content\\pages\\page_6.json"
+  },
+  "https://www.blog.micekart.com/virtual-event-solution/": {
+    "title": "Virtual Event Solutions - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\virtual_event_solution.json"
+  },
+  "https://www.blog.micekart.com/virtual-team-building-play-the-odds/": {
+    "title": "Virtual Team Building Play The Odds - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\virtual_team_building_play_the_odds.json"
+  },
+  "https://www.blog.micekart.com/corporate-event-in-cordelia-cruise/#main": {
+    "title": "Corporate Event in Cordelia Cruise - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_event_in_cordelia_cruise.json"
+  },
+  "https://www.blog.micekart.com/team-building-for-corporates-virtual-travelling/": {
+    "title": "Team Building For Corporates Virtual Travelling - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\team_building_for_corporates_virtual_travelling.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2021/12/Cordelia-Cruise-Package-2.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2021_12_Cordelia_Cruise_Package_2_pdf.json"
+  },
+  "https://www.blog.micekart.com/category/blog/page/2/#main": {
+    "title": "Blog Archives - Page 2 of 3 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_blog_page_2.json"
+  },
+  "https://www.blog.micekart.com/category/blog/page/3/#main": {
+    "title": "Blog Archives - Page 3 of 3 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_blog_page_3.json"
+  },
+  "https://www.blog.micekart.com/work-for-more-virtual-team-building-activity/": {
+    "title": "Work For More - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\work_for_more_virtual_team_building_activity.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/2/#main": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 2 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_2.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/4/": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 4 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_4.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/6/#main": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 6 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_6.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/5/": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 5 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_5.json"
+  },
+  "https://www.blog.micekart.com/mice-hotel-booking-solution/#main": {
+    "title": "MICE Hotel Booking Solution - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mice_hotel_booking_solution.json"
+  },
+  "https://www.blog.micekart.com/author/vincent/page/3/#main": {
+    "title": "Vincent, Author at MiceKart Blogs - Page 3 of 6",
+    "file_path": "micekart_content\\pages\\author_vincent_page_3.json"
+  },
+  "https://www.blog.micekart.com/if-its-m-i-c-e-travel-then-got-it-all-at-micekart-com/#main": {
+    "title": "If it’s M.I.C.E Travel, then we’ve got all it at MICEkart.com - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\if_its_m_i_c_e_travel_then_got_it_all_at_micekart_com.json"
+  },
+  "https://www.blog.micekart.com/corporate-virtual-event-solutions/#main": {
+    "title": "Corporate Virtual Event Solutions - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_virtual_event_solutions.json"
+  },
+  "https://www.blog.micekart.com/mysterious-fridays/#main": {
+    "title": "Mysterious Fridays - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\mysterious_fridays.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2021/01/Mysterious-Fridays-Corporate-Team-Building.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2021_01_Mysterious_Fridays_Corporate_Team_Building_pdf.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2021/01/Corporate-Team-Building-Activity-Morning-Rush.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2021_01_Corporate_Team_Building_Activity_Morning_Rush_pdf.json"
+  },
+  "https://www.blog.micekart.com/morning-rush/#main": {
+    "title": "Morning Rush - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\morning_rush.json"
+  },
+  "https://www.blog.micekart.com/secret-of-life/#main": {
+    "title": "Secret of Life - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\secret_of_life.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2021/01/Corporate-Team-Building-Activity-Secret-of-Life.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2021_01_Corporate_Team_Building_Activity_Secret_of_Life_pdf.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2021/01/Corporate-Team-Building-Activity-Friday-Funday.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2021_01_Corporate_Team_Building_Activity_Friday_Funday_pdf.json"
+  },
+  "https://www.blog.micekart.com/friday-funday/#main": {
+    "title": "Friday Funday - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\friday_funday.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-event-north/#main": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event North - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_event_north.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2021/01/B-Creative-Corporate-Team-Engagement-Activity-.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2021_01_B_Creative_Corporate_Team_Engagement_Activity__pdf.json"
+  },
+  "https://www.blog.micekart.com/b-creative/#main": {
+    "title": "B-Creative - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\b_creative.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-event-east/#main": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event East - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_event_east.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-event-south/#main": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event South - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_event_south.json"
+  },
+  "https://www.blog.micekart.com/best-pillar-less-banquet-venues-to-plan-your-next-corporate-event/#main": {
+    "title": "Best Pillar-less Banquet Venues to plan your next event West - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\best_pillar_less_banquet_venues_to_plan_your_next_corporate_event.json"
+  },
+  "https://www.blog.micekart.com/top-40-pillar-less-banquets-for-corporate-events/#main": {
+    "title": "Top 40 Pillar-Less Banquets For Corporate Events - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_40_pillar_less_banquets_for_corporate_events.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/11/Halt-No-More-Goa-MKPL_IBIS.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_11_Halt_No_More_Goa_MKPL_IBIS_pdf.json"
+  },
+  "https://www.blog.micekart.com/future-of-corporate-gifting/#main": {
+    "title": "Future of Corporate Gifting - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\future_of_corporate_gifting.json"
+  },
+  "https://www.blog.micekart.com/top-5-employee-engagement-activities-in-the-wfh-scenario/#main": {
+    "title": "Top 5 employee engagement activities in the WFH scenario - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_employee_engagement_activities_in_the_wfh_scenario.json"
+  },
+  "https://www.blog.micekart.com/winter-wear-specials/#main": {
+    "title": "Winter – Wear Specials - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\winter_wear_specials.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/12/Winter-wear-Specials.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_12_Winter_wear_Specials_pdf.json"
+  },
+  "https://www.micekart.com/?fbclid=IwAR0pcTkAAXd394LN19NVRW27sXf58KyEUEf7i4uFWg2doW_yvcMo0AUvivM": {
+    "title": "Top MICE Company in India | Event Planners – MICEkart",
+    "file_path": "micekart_content\\pages\\index.json"
+  },
+  "https://www.blog.micekart.com/importance-of-team-building-activities-in-the-new-normal/#main": {
+    "title": "Importance of Team building activities in the new normal - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\importance_of_team_building_activities_in_the_new_normal.json"
+  },
+  "https://www.blog.micekart.com/new-year-gifting/#main": {
+    "title": "New Year Gifting - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\new_year_gifting.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/12/New-year-gifting-MICEkart.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_12_New_year_gifting_MICEkart_pdf.json"
+  },
+  "https://www.blog.micekart.com/10-essential-work-from-home-accessories/#main": {
+    "title": "10 essential Work from home accessories - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\10_essential_work_from_home_accessories.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/12/10-Essential-Work-From-Home-Accessories.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_12_10_Essential_Work_From_Home_Accessories_pdf.json"
+  },
+  "https://www.blog.micekart.com/festive-gifting/#main": {
+    "title": "Festive Gifting - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\festive_gifting.json"
+  },
+  "https://www.blog.micekart.com/health-and-fitness/#main": {
+    "title": "Health and Fitness - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\health_and_fitness.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/12/Health-Fitness-MICEkart.com_.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_12_Health_Fitness_MICEkart_com__pdf.json"
+  },
+  "https://www.blog.micekart.com/team-building-program/#main": {
+    "title": "Team Building Program - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\team_building_program.json"
+  },
+  "https://www.blog.micekart.com/trophies-awards/#main": {
+    "title": "Trophies and Awards - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\trophies_awards.json"
+  },
+  "https://www.blog.micekart.com/gift-vouchers/#main": {
+    "title": "Gift Vouchers - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\gift_vouchers.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/11/MICEKART-Trophies-Awards-7_compressed.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_11_MICEKART_Trophies_Awards_7_compressed_pdf.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/11/Gift-Voucher-MICEkart.com_.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_11_Gift_Voucher_MICEkart_com__pdf.json"
+  },
+  "https://www.blog.micekart.com/virtual-reward-and-recognition-programe/#main": {
+    "title": "Virtual Reward and Recognition Programe - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\virtual_reward_and_recognition_programe.json"
+  },
+  "https://www.blog.micekart.com/micekart-specialized-themes/#main": {
+    "title": "MICEkart Specialized Themes - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\micekart_specialized_themes.json"
+  },
+  "https://www.blog.micekart.com/unique-gifting-ideas-to-reward-the-gifted/#main": {
+    "title": "Unique gifting ideas to reward the gifted - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\unique_gifting_ideas_to_reward_the_gifted.json"
+  },
+  "https://www.blog.micekart.com/top-5-resorts-to-experience-snow/#main": {
+    "title": "Top 5 Resorts to Experience Snow - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_resorts_to_experience_snow.json"
+  },
+  "https://www.blog.micekart.com/top-5-desert-destinations-for-mice/#main": {
+    "title": "Top 5 Desert Destinations for MICE - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_desert_destinations_for_mice.json"
+  },
+  "https://www.blog.micekart.com/top-5-destinations-for-heritage-tourism/#main": {
+    "title": "Top 5 Destinations for Heritage Tourism - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_destinations_for_heritage_tourism.json"
+  },
+  "https://www.blog.micekart.com/top-5-budget-international-destination/#main": {
+    "title": "Top 5 Budget International Destination - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\top_5_budget_international_destination.json"
+  },
+  "https://www.blog.micekart.com/unique-corporate-gifting-ideas-for-employee-incentivization/#main": {
+    "title": "Unique Corporate Gifting Ideas - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\unique_corporate_gifting_ideas_for_employee_incentivization.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/2in1wifiandbluetoothwirelessadapterbulkbuyingforcorpora/MjIyNw==": {
+    "title": "2 in 1 WiFi and Bluetooth 4.0 Wireless Adapter Bulk Discounts || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_2in1wifiandbluetoothwirelessadapterbulkbuyingforcorpora_MjIyNw__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/pebblesensewireleschargingpadbulkbuyingforcorporates/MjIyNQ==": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_pebblesensewireleschargingpadbulkbuyingforcorporates_MjIyNQ__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/carheatermugusbchargerbulkbuyingforcorporates/MjIxNg==": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_carheatermugusbchargerbulkbuyingforcorporates_MjIxNg__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/portronicsauto10bulkbuyingforcorporates/MjIzMw==": {
+    "title": "Portronics Auto 10 Employee Incentives || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_portronicsauto10bulkbuyingforcorporates_MjIzMw__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/Xech2in1BluetoothSpeakerwithEarpodsbulkbuyingforcorpora/MjE5OQ==": {
+    "title": "Xech 2 in 1 Bluetooth Speaker with Earpods Unique Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_Xech2in1BluetoothSpeakerwithEarpodsbulkbuyingforcorpora_MjE5OQ__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/mismartbedsidelamp2bulkbuyingforcorporates/MjIyMA==": {
+    "title": "Mi Smart Bedside Lamp 2 Bulk Discounts || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_mismartbedsidelamp2bulkbuyingforcorporates_MjIyMA__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/XechSatellite10000mAhPowerBankbulkbuyingforcorporate/MjI2OA==": {
+    "title": "Xech Satellite 10000 mAh Power Bank Employee Incentives || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_XechSatellite10000mAhPowerBankbulkbuyingforcorporate_MjI2OA__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/powerpointclickerpresentationremotecontrolbulkbuying/MjI0MA==": {
+    "title": "Power Point Clicker Presentation Remote Control Pen Corporate Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_powerpointclickerpresentationremotecontrolbulkbuying_MjI0MA__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/GrappleSpeakerbulkbuyingforcorporategifting/MjI2Mg==": {
+    "title": "Grapple Speaker Employee Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_GrappleSpeakerbulkbuyingforcorporategifting_MjI2Mg__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/merchMKTechDiaries005/MjAw": {
+    "title": "MK Tech Diaries 002 Employee Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_merchMKTechDiaries005_MjAw.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/potronicstimeoutcountdowbulkbuyingforcorporates/MjIzNg==": {
+    "title": "Potronics Timeout Countdown Timer Cube || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_potronicstimeoutcountdowbulkbuyingforcorporates_MjIzNg__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/merchZebronicsrover/Mjc2": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_merchZebronicsrover_Mjc2.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/XECHDigitalPhotoFramebulkbuyingforcorporategifting/MjE5Ng==": {
+    "title": "XECH Digital Photo Frame Employee Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_XECHDigitalPhotoFramebulkbuyingforcorporategifting_MjE5Ng__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/usbstudiomicrophonevoicespeechbulkbuyingforcorporates/MjIzOQ==": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_usbstudiomicrophonevoicespeechbulkbuyingforcorporates_MjIzOQ__.json"
+  },
+  "https://www.blog.micekart.com/virtual-team-building-do-you-know-your-company/#main": {
+    "title": "Virtual Team Building Know Your Company - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\virtual_team_building_do_you_know_your_company.json"
+  },
+  "https://www.micekart.com/static/media/Unique-Gifting-Solution-MICEkart.com_compressed.27dd3905.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Unique_Gifting_Solution_MICEkart_com_compressed_27dd3905_pdf.json"
+  },
+  "https://www.blog.micekart.com/tag/merchandise/": {
+    "title": "Merchandise Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\tag_merchandise.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/12/Do-you-know-your-Company-MICEkart.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_12_Do_you_know_your_Company_MICEkart_pdf.json"
+  },
+  "https://www.blog.micekart.com/tag/virtual-team-building/": {
+    "title": "Virtual Team Building Archives - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\tag_virtual_team_building.json"
+  },
+  "https://www.blog.micekart.com/know-your-team-virtual-team-building/#main": {
+    "title": "Know Your Team Virtual Team Building - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\know_your_team_virtual_team_building.json"
+  },
+  "https://www.blog.micekart.com/wp-content/uploads/2020/12/Know-your-team-MICEkart.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\wp_content_uploads_2020_12_Know_your_team_MICEkart_pdf.json"
+  },
+  "https://www.blog.micekart.com/league-of-corporate-legends/#main": {
+    "title": "League of Corporate Legends - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\league_of_corporate_legends.json"
+  },
+  "https://www.micekart.com/static/media/League-of-Corporate-Legends_compressed.c1ae2f10.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_League_of_Corporate_Legends_compressed_c1ae2f10_pdf.json"
+  },
+  "https://www.blog.micekart.com/182/#main": {
+    "title": "HNI Client Engagement - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\182.json"
+  },
+  "https://www.micekart.com/static/media/HNI-Client-Engagement.ce129ff6.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_HNI_Client_Engagement_ce129ff6_pdf.json"
+  },
+  "https://micekart.com/mice-merchandise/Moradabad/crystaloilpujalampbulkbuyingforcorporates/MTg4NQ==": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Moradabad_crystaloilpujalampbulkbuyingforcorporates_MTg4NQ__.json"
+  },
+  "https://www.blog.micekart.com/2020/10/page/2/#main": {
+    "title": "October 2020 - Page 2 of 2 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\2020_10_page_2.json"
+  },
+  "https://www.blog.micekart.com/event-blog-footer-4/#main": {
+    "title": "Top 5 Festivals To Plan Your Next Offsite - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\event_blog_footer_4.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/premiumchocolatecracker4itemsbulkbuyingforcorporates/MTg5Nw==": {
+    "title": "Premium Chocolate Cracker 4 items Employee Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_premiumchocolatecracker4itemsbulkbuyingforcorporates_MTg5Nw__.json"
+  },
+  "https://www.blog.micekart.com/corporate-diwali-gifting-ideas/#main": {
+    "title": "Corporate Diwali Gifting Ideas - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\corporate_diwali_gifting_ideas.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/FloralBoxOfChocolates/MTM5Mg==": {
+    "title": "Floral Box Of Chocolates Corporate Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_FloralBoxOfChocolates_MTM5Mg__.json"
+  },
+  "https://www.micekart.com/mice-merchandise/Mumbai/HandiCraftDecorativeBrassBowlSetbulkbuyingforcorporate/MTg2OA==": {
+    "title": "Handi Craft Decorative Brass Bowl Set Corporate Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_HandiCraftDecorativeBrassBowlSetbulkbuyingforcorporate_MTg2OA__.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/specialkajubadamanjeersweetbulkbuyingforcorporates/MTgzNQ==": {
+    "title": "undefined",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_specialkajubadamanjeersweetbulkbuyingforcorporates_MTgzNQ__.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/DesignerAssortedChocolates/MTM5MA==": {
+    "title": "Designer Assorted Chocolates Bulk Discounts || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_DesignerAssortedChocolates_MTM5MA__.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/dryfruitboxbulkbuyingforcorporates/MjM3MA==": {
+    "title": "Dry Fruit Box Unique Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_dryfruitboxbulkbuyingforcorporates_MjM3MA__.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/brassoildiyabulkbuyingforcorporates/MTM2NQ==": {
+    "title": "Brass Oil diya Employee Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_brassoildiyabulkbuyingforcorporates_MTM2NQ__.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/fancydiyabulkbuyingforcorporates/MTM3Mg==": {
+    "title": "Fancy Diya Employee Incentives || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_fancydiyabulkbuyingforcorporates_MTM3Mg__.json"
+  },
+  "https://micekart.com/mice-merchandise/Mumbai/premiumdiwalicrackerwoodenboxbulkbuyingforcorporates/MTkxNQ==": {
+    "title": "Premium Diwali Cracker in Wooden Box and 4 Candle Employee Gifting || MICEkart.com",
+    "file_path": "micekart_content\\pages\\mice_merchandise_Mumbai_premiumdiwalicrackerwoodenboxbulkbuyingforcorporates_MTkxNQ__.json"
+  },
+  "https://www.micekart.com/static/media/Diwali-Gifting-Ideas-MICEkart.com_compressed.9f4a413b.pdf": {
+    "title": "",
+    "file_path": "micekart_content\\pages\\static_media_Diwali_Gifting_Ideas_MICEkart_com_compressed_9f4a413b_pdf.json"
+  },
+  "https://www.blog.micekart.com/category/corporate-team-building/page/2/#main": {
+    "title": "Corporate Team Building Archives - Page 2 of 2 - MiceKart Blogs",
+    "file_path": "micekart_content\\pages\\category_corporate_team_building_page_2.json"
+  }
+}

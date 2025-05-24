@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Conference Costs - Admin Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body class="admin-page">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-logo">
+                <a href="/admin/dashboard.html">
+                    <img src="/assets/images/logo.png" alt="EventPro">
+                    <span>EventPro Admin</span>
+                </a>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="/admin/dashboard.html">Dashboard</a></li>
+                    <li><a href="/admin/update-costs.html" class="active">Conference Costs</a></li>
+                    <li><a href="/admin/packages.html">Packages</a></li>
+                    <li><a href="/admin/inquiries.html">Inquiries</a></li>
+                </ul>
+            </nav>
+            <div class="admin-user">
+                <span>Admin User</span>
+                <a href="/admin/logout.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="container">
+            <div class="admin-header-block">
+                <h1>Update Conference Costs</h1>
+                <div class="admin-actions">
+                    <button class="btn btn-secondary" id="restore-defaults">Restore Defaults</button>
+                    <button class="btn btn-primary" id="save-all-changes">Save All Changes</button>
+                </div>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="basic">Basic Package</button>
+                <button class="tab-btn" data-tab="standard">Standard Package</button>
+                <button class="tab-btn" data-tab="premium">Premium Package</button>
+                <button class="tab-btn" data-tab="addons">Add-ons</button>
+            </div>
+
+            <div class="tab-content active" id="basic-tab">
+                <h2>Basic Conference Package Costs</h2>
+                
+                <div class="cost-editor-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="basic-min-price">Minimum Price (₹)</label>
+                            <input type="number" id="basic-min-price" value="27000">
+                        </div>
+                        <div class="form-group">
+                            <label for="basic-max-price">Maximum Price (₹)</label>
+                            <input type="number" id="basic-max-price" value="37000">
+                        </div>
+                    </div>
+                    
+                    <h3>Component Costs</h3>
+                    <div class="component-costs">
+                        <div class="cost-item">
+                            <label for="basic-stage">Stage (16 x 12 x 1.5 feet)</label>
+                            <input type="number" id="basic-stage" value="8000">
+                        </div>
+                        <div class="cost-item">
+                            <label for="basic-audio">Basic P.A. System with 2 Tops</label>
+                            <input type="number" id="basic-audio" value="10000">
+                        </div>
+                        <div class="cost-item">
+                            <label for="basic-mics">Hand & Collar Mic</label>
+                            <input type="number" id="basic-mics" value="3000">
+                        </div>
+                        <div class="cost-item">
+                            <label for="basic-screen">Screen on Tri-pod Stand</label>
+                            <input type="number" id="basic-screen" value="2500">
+                        </div>
+                        <div class="cost-item">
+                            <label for="basic-projector">Projector</label>
+                            <input type="number" id="basic-projector" value="3500">
+                        </div>
+                        <div class="cost-item">
+                            <label for="basic-backdrop">Backdrop (16 x 8 feet)</label>
+                            <input type="number" id="basic-backdrop" value="6000">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary" id="save-basic">Save Basic Package</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Similar tab content for Standard and Premium packages -->
+            
+            <div class="tab-content" id="addons-tab">
+                <h2>Conference Add-ons</h2>
+                
+                <div class="cost-editor-form">
+                    <div class="component-costs">
+                        <div class="cost-item">
+                            <label for="addon-laptop">Laptop</label>
+                            <input type="number" id="addon-laptop" value="2000">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-clicker">Clicker</label>
+                            <input type="number" id="addon-clicker" value="600">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-pointer">Pointer</label>
+                            <input type="number" id="addon-pointer" value="500">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-standee">Roll-up Standee (6 x 3 ft)</label>
+                            <input type="number" id="addon-standee" value="1200">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-internet-min">Internet Connection (Min)</label>
+                            <input type="number" id="addon-internet-min" value="4000">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-internet-max">Internet Connection (Max)</label>
+                            <input type="number" id="addon-internet-max" value="10000">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-lapel">Lapel Mic</label>
+                            <input type="number" id="addon-lapel" value="700">
+                        </div>
+                        <div class="cost-item">
+                            <label for="addon-pendrive">Pen Drive</label>
+                            <input type="number" id="addon-pendrive" value="400">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary" id="save-addons">Save Add-ons</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/admin.js"></script>
+</body>
+</html>

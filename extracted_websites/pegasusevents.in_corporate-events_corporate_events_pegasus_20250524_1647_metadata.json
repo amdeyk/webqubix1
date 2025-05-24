@@ -1,0 +1,18 @@
+{
+  "url": "https://pegasusevents.in/corporate-events/",
+  "status_code": 200,
+  "title": "Corporate Events | Pegasus Events | Event Management Company",
+  "description": "Corporate Events managed by us. Here you will find links to albums from the different types of events managed by us. Click here to read more.",
+  "keywords": "",
+  "detected_interactive_elements": [
+    "tabs",
+    "accordions",
+    "load_more",
+    "menus",
+    "infinite_scroll"
+  ],
+  "has_javascript": true,
+  "extraction_method": "fallback_http",
+  "success": true,
+  "content_length": 2373
+}

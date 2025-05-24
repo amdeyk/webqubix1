@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Cost Directory - EventPro</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <!-- Header (same as base.html) -->
+    
+    <!-- Directory Hero -->
+    <section class="directory-hero">
+        <div class="container">
+            <h1>Conference Cost Directory</h1>
+            <p>Find detailed cost breakdowns for every type of conference setup</p>
+        </div>
+    </section>
+
+    <!-- Directory Filters -->
+    <section class="directory-filters">
+        <div class="container">
+            <div class="filter-form">
+                <div class="filter-group">
+                    <label for="attendees">Number of Attendees</label>
+                    <select id="attendees">
+                        <option value="all">All Sizes</option>
+                        <option value="small">Small (10-50)</option>
+                        <option value="medium">Medium (50-150)</option>
+                        <option value="large">Large (150-500)</option>
+                        <option value="xlarge">Extra Large (500+)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget">
+                        <option value="all">All Budgets</option>
+                        <option value="economy">Economy (₹20k-₹50k)</option>
+                        <option value="standard">Standard (₹50k-₹150k)</option>
+                        <option value="premium">Premium (₹150k-₹300k)</option>
+                        <option value="luxury">Luxury (₹300k+)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type">Conference Type</label>
+                    <select id="type">
+                        <option value="all">All Types</option>
+                        <option value="corporate">Corporate Meetings</option>
+                        <option value="academic">Academic Conferences</option>
+                        <option value="workshops">Workshops & Training</option>
+                        <option value="product">Product Launches</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="filter-btn">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Packages Listing -->
+    <section class="directory-listing">
+        <div class="container">
+            <div class="package-grid">
+                <!-- Basic Conference Package -->
+                <div class="package-card" data-size="small" data-budget="economy" data-type="corporate,workshops">
+                    <div class="package-image">
+                        <img src="/assets/images/basic-conference.jpg" alt="Basic Conference">
+                    </div>
+                    <div class="package-content">
+                        <h3>Basic Conference Setup</h3>
+                        <p>Perfect for meetings up to 50 attendees</p>
+                        <div class="package-details">
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-users"></i></span>
+                                <span class="detail-text">Up to 50 people</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="detail-text">Indoor venues</span>
+                            </div>
+                        </div>
+                        <div class="package-price">₹27,000 - ₹37,000</div>
+                        <a href="/packages/basic-conference.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Standard Conference Package -->
+                <div class="package-card" data-size="medium" data-budget="standard" data-type="corporate,academic,product">
+                    <div class="package-image">
+                        <img src="/assets/images/standard-conference.jpg" alt="Standard Conference">
+                    </div>
+                    <div class="package-content">
+                        <h3>Standard Conference Package</h3>
+                        <p>Ideal for events with 50-150 attendees</p>
+                        <div class="package-details">
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-users"></i></span>
+                                <span class="detail-text">50-150 people</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="detail-text">Indoor/Outdoor</span>
+                            </div>
+                        </div>
+                        <div class="package-price">₹75,000 - ₹120,000</div>
+                        <a href="/packages/standard-conference.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Premium Conference Package -->
+                <div class="package-card" data-size="large" data-budget="premium" data-type="corporate,academic,product">
+                    <div class="package-image">
+                        <img src="/assets/images/premium-conference.jpg" alt="Premium Conference">
+                    </div>
+                    <div class="package-content">
+                        <h3>Premium Conference Experience</h3>
+                        <p>Comprehensive solution for 150-500 attendees</p>
+                        <div class="package-details">
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-users"></i></span>
+                                <span class="detail-text">150-500 people</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="detail-text">Premium Venues</span>
+                            </div>
+                        </div>
+                        <div class="package-price">₹150,000 - ₹300,000</div>
+                        <a href="/packages/premium-conference.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Add more conference packages here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Estimator Tool -->
+    <section class="cost-estimator">
+        <div class="container">
+            <h2>Conference Cost Estimator</h2>
+            <p>Calculate approximate costs for your specific conference needs</p>
+            
+            <div class="estimator-tool">
+                <div class="estimator-form">
+                    <div class="form-group">
+                        <label for="est-attendees">Number of Attendees</label>
+                        <input type="number" id="est-attendees" min="10" value="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="est-duration">Duration (days)</label>
+                        <input type="number" id="est-duration" min="1" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label>Services Needed</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked value="venue"> Venue Rental</label>
+                            <label><input type="checkbox" checked value="av"> Audio-Visual</label>
+                            <label><input type="checkbox" value="catering"> Catering</label>
+                            <label><input type="checkbox" value="decor"> Decoration</label>
+                            <label><input type="checkbox" value="registration"> Registration</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="calculate-btn">Calculate Costs</button>
+                </div>
+                <div class="estimator-results">
+                    <h3>Estimated Cost Breakdown</h3>
+                    <div id="cost-breakdown">
+                        <!-- Results will be displayed here via JavaScript -->
+                        <p>Please enter your requirements and click Calculate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as base.html) -->
+    
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cost-calculator.js"></script>
+</body>
+</html>
