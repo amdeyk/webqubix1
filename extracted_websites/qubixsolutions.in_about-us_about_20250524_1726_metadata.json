@@ -1,0 +1,15 @@
+{
+  "url": "https://qubixsolutions.in/about-us/",
+  "status_code": 200,
+  "title": "About Us - Online Conference Planning & Management",
+  "description": "Welcome to Qubix Events and Conferences Pvt. Ltd., your partner in immersive event experiences and strategic brand elevation.",
+  "keywords": null,
+  "detected_interactive_elements": [
+    "menus",
+    "infinite_scroll"
+  ],
+  "has_javascript": true,
+  "extraction_method": "interactive_crawl4ai",
+  "success": true,
+  "content_length": 3989
+}
