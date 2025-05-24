@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Section 1: Hero Section -->
+<section class="relative bg-gradient-to-r from-qubix-dark to-qubix-blue text-white">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="white" stroke-width="1" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+    </div>
+
+    <div class="container mx-auto px-4 py-20 md:py-32 relative z-10">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Elevate Your Events with Qubix
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100">
+                    Professional conference planning & event management services across India.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="/services" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+                        Our Services
+                    </a>
+                    <a href="/contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-qubix-blue transition-colors text-center">
+                        Get a Quote
+                    </a>
+                </div>
+                
+                <!-- Metrics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">200+</p>
+                        <p class="text-sm text-gray-200">Medical Conferences</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">400+</p>
+                        <p class="text-sm text-gray-200">Corporate Events</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">1000+</p>
+                        <p class="text-sm text-gray-200">Virtual Conferences</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold">50+</p>
+                        <p class="text-sm text-gray-200">Exhibitions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <img src="{{ request.url_for('static', path='images/hero-conference.png') }}" 
+                     alt="Professional Conference Setup" 
+                     class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Services Overview -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Premium Services</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive event management solutions tailored to your specific needs
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for service in featured_services %}
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="{{ service.image_url or request.url_for('static', path='images/service-placeholder.jpg') }}" 
+                     alt="{{ service.name }}" 
+                     class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">{{ service.name }}</h3>
+                    <p class="text-gray-600 mb-4">{{ service.short_description }}</p>
+                    <a href="/services/{{ service.slug }}" class="text-qubix-blue font-semibold hover:text-qubix-dark">
+                        Learn More →
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-10">
+            <a href="/services" class="bg-qubix-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-qubix-dark transition-colors">
+                View All Services
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Why Choose Us -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Qubix Events?</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Delivering exceptional event experiences that exceed expectations
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-medal text-qubix-blue text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Expertise & Experience</h3>
+                <p class="text-gray-600">
+                    With over 15 years of experience in event management, our seasoned team brings unparalleled expertise to every project.
+                </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-users text-qubix-blue text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Dedicated Team</h3>
+                <p class="text-gray-600">
+                    Our professional team ensures meticulous planning and flawless execution, handling every detail with precision.
+                </p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-lightbulb text-qubix-blue text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Innovative Solutions</h3>
+                <p class="text-gray-600">
+                    We create unique event experiences through innovative concepts, cutting-edge technology, and creative design.
+                </p>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-map-marker-alt text-qubix-blue text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Pan-India Presence</h3>
+                <p class="text-gray-600">
+                    With offices in Delhi, Kolkata, and Bangalore, we offer seamless event management services throughout India.
+                </p>
+            </div>
+            
+            <!-- Feature 5 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-wallet text-qubix-blue text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Cost-Effective Solutions</h3>
+                <p class="text-gray-600">
+                    We optimize your budget without compromising on quality, ensuring maximum value for your investment.
+                </p>
+            </div>
+            
+            <!-- Feature 6 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-qubix-blue bg-opacity-10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-headset text-qubix-blue text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Support</h3>
+                <p class="text-gray-600">
+                    Our dedicated team provides round-the-clock support throughout the planning and execution phases.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Recent Events Showcase -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Recent Events</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our portfolio of successfully executed events across India
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event 1 -->
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="{{ request.url_for('static', path='images/events/ezecho-2023.jpg') }}" 
+                         alt="EZECHO 2023" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white">EZECHO 2023</h3>
+                        <p class="text-gray-200">The Taj Bengal, Kolkata</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event 2 -->
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="{{ request.url_for('static', path='images/events/eiicon-2023.jpg') }}" 
+                         alt="EIICON 2023" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white">EIICON 2023</h3>
+                        <p class="text-gray-200">ITC Sonar, Kolkata</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event 3 -->
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="{{ request.url_for('static', path='images/events/pcsi-2022.jpg') }}" 
+                         alt="PCSI 2022" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white">PCSI 2022</h3>
+                        <p class="text-gray-200">Biswa Bangla Convention Centre, Kolkata</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-10">
+            <a href="/portfolio" class="bg-qubix-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-qubix-dark transition-colors">
+                View All Events
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Testimonials -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Hear from our satisfied clients about their experience with Qubix Events
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 mb-6 italic">
+                    "Exceptional conference planning by Qubix Solutions! From conceptualization to execution, they demonstrated unmatched expertise. Their proactive approach and professionalism truly set them apart."
+                </p>
+                <div class="flex items-center">
+                    <img src="{{ request.url_for('static', path='images/testimonials/dipendra.jpg') }}" 
+                         alt="Dipendra Parihar" 
+                         class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Dipendra Parihar</h4>
+                        <p class="text-gray-500 text-sm">Conference Organizer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 mb-6 italic">
+                    "Qubix Solutions orchestrated our conference flawlessly. Their innovative ideas, strategic thinking, and unwavering commitment to excellence resulted in a highly successful event. We couldn't be happier with the outcome!"
+                </p>
+                <div class="flex items-center">
+                    <img src="{{ request.url_for('static', path='images/testimonials/riya.jpg') }}" 
+                         alt="Riya Kukreja" 
+                         class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Riya Kukreja</h4>
+                        <p class="text-gray-500 text-sm">Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 mb-6 italic">
+                    "Qubix Solutions exceeded our expectations in conference planning. Their meticulous attention to detail ensured a seamless event. Impressive teamwork and flawless execution. Highly recommended!"
+                </p>
+                <div class="flex items-center">
+                    <img src="{{ request.url_for('static', path='images/testimonials/mayank.jpg') }}" 
+                         alt="Mayank Rawat" 
+                         class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Mayank Rawat</h4>
+                        <p class="text-gray-500 text-sm">Event Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: CTA -->
+<section class="py-16 bg-qubix-blue text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Make Your Event Extraordinary?</h2>
+            <p class="text-xl text-gray-100 mb-8">
+                Contact our team today for a customized quote and let us bring your vision to life.
+            </p>
+            <a href="/contact" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                Request a Proposal
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

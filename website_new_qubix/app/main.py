@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 # Section 2: Import custom modules
-from app.routers import pages, api, admin
+from app.routers import pages, api
 from app.database import engine, Base
 from app.config import settings
 from app.services.seo_service import SEOService
@@ -19,8 +19,8 @@ app = FastAPI(
     title="Qubix Events & Conferences",
     description="Professional event planning and conference management services",
     version="2.0.0",
-    docs_url="/admin/docs" if settings.ENVIRONMENT != "production" else None,
-    redoc_url="/admin/redoc" if settings.ENVIRONMENT != "production" else None
+    # docs_url="/admin/docs" if settings.ENVIRONMENT != "production" else None,
+    # redoc_url="/admin/redoc" if settings.ENVIRONMENT != "production" else None
 )
 
 # Section 4: CORS and Security Middleware
@@ -46,7 +46,7 @@ async def startup_event():
 # Section 7: Include routers for different sections
 app.include_router(pages.router, tags=["pages"])
 app.include_router(api.router, prefix="/api", tags=["api"])
-app.include_router(admin.router, prefix="/admin", tags=["admin"])
+# app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 # Section 8: Root endpoint with SEO optimization
 @app.get("/", response_class=HTMLResponse)

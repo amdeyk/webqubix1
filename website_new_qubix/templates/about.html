@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Section 1: About Hero -->
+<section class="bg-gradient-to-r from-qubix-dark to-qubix-blue text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Qubix Events & Conferences</h1>
+            <p class="text-xl mb-6">Your partner in immersive event experiences and strategic brand elevation.</p>
+            <div class="flex items-center space-x-4">
+                <div class="h-1 w-20 bg-white"></div>
+                <span>Established leaders in MICE services across India</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Our Story -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+                <p class="text-gray-600 mb-4">
+                    Welcome to Qubix Events and Conferences Pvt. Ltd., we are providing Online Conference Planning and Virtual Conference Platform services with a comprehensive understanding of the marketing landscape.
+                </p>
+                <p class="text-gray-600 mb-4">
+                    At Qubix, we excel in illuminating your current position and charting the course ahead. Our expertise lies in envisioning needs, anticipating trends, articulating possibilities, and honing strategies.
+                </p>
+                <p class="text-gray-600">
+                    Drawing from our extensive industry knowledge, we meld end-user insights, market dynamics, and product acumen to craft the most robust frameworks. Our commitment extends to seamless execution, collaborating closely with stakeholders to orchestrate efficient and impactful marketing initiatives that resonate with your core brand messages.
+                </p>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+                <img src="{{ request.url_for('static', path='images/about-team.jpg') }}" 
+                     alt="Qubix Events Team" class="w-full h-auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Our Expertise Stats -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Expertise</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Medical Conferences -->
+            <div class="bg-white rounded-lg shadow-md p-6 text-center transform transition hover:scale-105">
+                <div class="text-qubix-blue text-5xl font-bold mb-2">200+</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Medical Conferences</h3>
+                <p class="text-gray-600">Successfully organized medical conferences across India with leading healthcare institutions</p>
+            </div>
+            
+            <!-- Corporate Conferences -->
+            <div class="bg-white rounded-lg shadow-md p-6 text-center transform transition hover:scale-105">
+                <div class="text-qubix-blue text-5xl font-bold mb-2">400+</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Corporate Conferences</h3>
+                <p class="text-gray-600">Managed corporate events including product launches, annual meetings, and team building events</p>
+            </div>
+            
+            <!-- Virtual Conferences -->
+            <div class="bg-white rounded-lg shadow-md p-6 text-center transform transition hover:scale-105">
+                <div class="text-qubix-blue text-5xl font-bold mb-2">1000+</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Virtual Conferences</h3>
+                <p class="text-gray-600">Hosted virtual conferences with cutting-edge technology and interactive features</p>
+            </div>
+            
+            <!-- Exhibitions -->
+            <div class="bg-white rounded-lg shadow-md p-6 text-center transform transition hover:scale-105">
+                <div class="text-qubix-blue text-5xl font-bold mb-2">50+</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Exhibitions</h3>
+                <p class="text-gray-600">Designed and executed exhibitions and stalls for various industries and events</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Our Team & Locations -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Presence</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Delhi Office -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="h-48 bg-qubix-blue flex items-center justify-center">
+                    <i class="fas fa-building text-white text-5xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Delhi Headquarters</h3>
+                    <p class="text-gray-600 mb-4">C 32 Madhu Vihar, IP Extension, Delhi 110092</p>
+                    <p class="text-gray-600">
+                        <i class="fas fa-phone mr-2 text-qubix-blue"></i> +91-11401-91417
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Kolkata Office -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="h-48 bg-qubix-blue flex items-center justify-center">
+                    <i class="fas fa-building text-white text-5xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Kolkata Branch</h3>
+                    <p class="text-gray-600 mb-4">7b Allenby Road, Kolkata 700020</p>
+                    <p class="text-gray-600">
+                        <i class="fas fa-phone mr-2 text-qubix-blue"></i> +91-98993-39005
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Bangalore Office -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="h-48 bg-qubix-blue flex items-center justify-center">
+                    <i class="fas fa-building text-white text-5xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Bangalore Branch</h3>
+                    <p class="text-gray-600 mb-4">19/C, Vyshya Bank Colony, BTM 2nd Stage</p>
+                    <p class="text-gray-600">
+                        <i class="fas fa-phone mr-2 text-qubix-blue"></i> +91-85850-56488
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Our Process -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Event Management Process</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Step 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 relative">
+                <div class="absolute -top-5 -left-5 bg-qubix-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-4">Consultation</h3>
+                <p class="text-gray-600">We begin with a detailed consultation to understand your event objectives, audience, and vision.</p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 relative">
+                <div class="absolute -top-5 -left-5 bg-qubix-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-4">Planning</h3>
+                <p class="text-gray-600">Our team develops a comprehensive event plan with timelines, budgets, and logistics details.</p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 relative">
+                <div class="absolute -top-5 -left-5 bg-qubix-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-4">Execution</h3>
+                <p class="text-gray-600">We handle every aspect of the event, from venue setup to coordination with vendors and speakers.</p>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="bg-white rounded-lg shadow-md p-6 relative">
+                <div class="absolute -top-5 -left-5 bg-qubix-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-4">Follow-up</h3>
+                <p class="text-gray-600">Post-event analysis and reporting to measure success and identify areas for improvement.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Testimonials -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="{{ request.url_for('static', path='images/testimonial-1.jpg') }}" 
+                         alt="Dipendra Parihar" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Dipendra Parihar</h4>
+                        <p class="text-gray-500 text-sm">August 24, 2023</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Exceptional conference planning by Qubix Solutions! From conceptualization to execution, they demonstrated unmatched expertise. Their proactive approach and professionalism truly set them apart. A definite go-to for events!"
+                </p>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="{{ request.url_for('static', path='images/testimonial-2.jpg') }}" 
+                         alt="Riya Kukreja" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Riya Kukreja</h4>
+                        <p class="text-gray-500 text-sm">April 27, 2023</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Qubix Solutions orchestrated our conference flawlessly. Their innovative ideas, strategic thinking, and unwavering commitment to excellence resulted in a highly successful event. We couldn't be happier with the outcome!"
+                </p>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="{{ request.url_for('static', path='images/testimonial-3.jpg') }}" 
+                         alt="Mayank Rawat" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Mayank Rawat</h4>
+                        <p class="text-gray-500 text-sm">June 12, 2022</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Qubix Solutions exceeded our expectations in conference planning. Their meticulous attention to detail ensured a seamless event. Impressive teamwork and flawless execution. Highly recommended!"
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Call to Action -->
+<section class="bg-qubix-blue py-16 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Create Your Next Successful Event?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Let's collaborate to bring your vision to life with our expertise in event management and conference planning.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <a href="/contact" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Contact Us
+            </a>
+            <a href="#quote-form" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-qubix-blue transition-colors">
+                Get a Quote
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 8: Quote Form -->
+<section class="py-16" id="quote-form">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="bg-qubix-dark text-white p-6">
+                <h2 class="text-2xl font-bold">Request a Quote</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours</p>
+            </div>
+            <div class="p-6">
+                <form id="quote-request-form" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Full Name*</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qubix-blue">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email Address*</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qubix-blue">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-1">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qubix-blue">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-gray-700 mb-1">Company/Organization</label>
+                            <input type="text" id="company" name="company" 
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qubix-blue">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="event_type" class="block text-gray-700 mb-1">Type of Event</label>
+                        <select id="event_type" name="event_type" 
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qubix-blue">
+                            <option value="">Select an event type</option>
+                            <option value="medical_conference">Medical Conference</option>
+                            <option value="corporate_event">Corporate Event</option>
+                            <option value="virtual_conference">Virtual Conference</option>
+                            <option value="exhibition">Exhibition</option>
+                            <option value="product_launch">Product Launch</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-1">Message/Requirements*</label>
+                        <textarea id="message" name="message" rows="4" required 
+                                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-qubix-blue"></textarea>
+                    </div>
+                    
+                    <div class="flex justify-end">
+                        <button type="submit" 
+                                class="bg-qubix-blue text-white px-6 py-3 rounded-lg hover:bg-qubix-dark transition-colors">
+                            Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Form submission handler
+    document.getElementById('quote-request-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            company: document.getElementById('company').value,
+            event_type: document.getElementById('event_type').value,
+            message: document.getElementById('message').value
+        };
+        
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('Thank you for your inquiry. We will get back to you within 24 hours.');
+                this.reset();
+            } else {
+                alert('There was a problem submitting your request. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('There was a problem submitting your request. Please try again.');
+        }
+    });
+</script>
+{% endblock %}

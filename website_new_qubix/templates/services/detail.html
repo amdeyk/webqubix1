@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Section 1: Service Hero -->
+<section class="bg-gradient-to-r from-qubix-dark to-qubix-blue text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">{{ service.name }}</h1>
+                <p class="text-xl text-gray-100">{{ service.short_description }}</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="{{ service.image_url or request.url_for('static', path='images/service-placeholder.jpg') }}" 
+                     alt="{{ service.name }}" 
+                     class="rounded-lg shadow-lg max-w-full h-auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Service Details -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Main Content -->
+            <div class="lg:w-2/3">
+                <div class="prose prose-lg max-w-none">
+                    {{ service.full_description|safe }}
+                </div>
+                
+                <!-- Features List -->
+                {% if service.features %}
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Key Features</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {% for feature in service.features %}
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-3 mt-1">
+                                <i class="fas fa-check-circle text-qubix-blue text-xl"></i>
+                            </div>
+                            <p class="text-gray-700">{{ feature }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <!-- Gallery -->
+                {% if service.gallery_images %}
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Gallery</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {% for image in service.gallery_images %}
+                        <a href="{{ image }}" class="gallery-item">
+                            <img src="{{ image }}" 
+                                 alt="{{ service.name }}" 
+                                 class="rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-48 object-cover">
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="lg:w-1/3">
+                <!-- Quote Request Form -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Request a Quote</h3>
+                    <form id="quote-form" class="space-y-4">
+                        <input type="hidden" name="service_id" value="{{ service.id }}">
+                        
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="event_date" class="block text-sm font-medium text-gray-700 mb-1">Event Date</label>
+                            <input type="date" id="event_date" name="event_date"
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="requirements" class="block text-sm font-medium text-gray-700 mb-1">Requirements</label>
+                            <textarea id="requirements" name="requirements" rows="4"
+                                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full bg-qubix-blue text-white py-2 px-4 rounded-md font-medium hover:bg-qubix-dark transition-colors">
+                                Submit Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Us</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-qubix-blue"></i>
+                            <a href="tel:+919899339005" class="text-gray-700 hover:text-qubix-blue">+91-98993-39005</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-qubix-blue"></i>
+                            <a href="mailto:info@qubixsolutions.in" class="text-gray-700 hover:text-qubix-blue">info@qubixsolutions.in</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Related Services -->
+                {% if related_services %}
+                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Related Services</h3>
+                    <ul class="space-y-4">
+                        {% for related in related_services %}
+                        <li>
+                            <a href="/services/{{ related.slug }}" class="flex items-center group">
+                                <div class="flex-shrink-0 mr-3">
+                                    <img src="{{ related.image_url or request.url_for('static', path='images/service-placeholder.jpg') }}" 
+                                         alt="{{ related.name }}" 
+                                         class="w-16 h-16 object-cover rounded-md">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 group-hover:text-qubix-blue transition-colors">{{ related.name }}</h4>
+                                    <p class="text-sm text-gray-500">{{ related.short_description|truncate(50) }}</p>
+                                </div>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: CTA -->
+<section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="bg-qubix-blue text-white rounded-lg shadow-lg p-8 lg:p-12">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Need more information?</h3>
+                    <p class="text-gray-100">
+                        Our team is ready to assist you with detailed information and customized solutions.
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="/contact" class="bg-white text-qubix-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteForm = document.getElementById('quote-form');
+    
+    quoteForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(quoteForm);
+        const data = Object.fromEntries(formData.entries());
+        
+        fetch('/api/quote', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                alert(result.message);
+                quoteForm.reset();
+            } else {
+                alert('Error: ' + result.detail);
+            }
+        })
+        .catch(error => {
+            alert('There was an error submitting your request. Please try again.');
+            console.error('Error:', error);
+        });
+    });
+});
+</script>
+{% endblock %}
