@@ -10,9 +10,16 @@
             <div class="md:w-1/2 mb-8 md:mb-0">
                 <h1 class="text-3xl md:text-4xl font-bold mb-4">{{ service.name }}</h1>
                 <p class="text-xl text-gray-100">{{ service.short_description }}</p>
+                {% if service.price_range %}
+                <div class="mt-6">
+                    <span class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg font-semibold">
+                        {{ service.price_range }}
+                    </span>
+                </div>
+                {% endif %}
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <img src="{{ service.image_url or request.url_for('static', path='images/service-placeholder.jpg') }}" 
+                <img src="https://via.placeholder.com/500x300/2c5aa0/ffffff?text={{ service.name|replace(' ', '+') }}" 
                      alt="{{ service.name }}" 
                      class="rounded-lg shadow-lg max-w-full h-auto">
             </div>
@@ -26,16 +33,98 @@
         <div class="flex flex-col lg:flex-row gap-12">
             <!-- Main Content -->
             <div class="lg:w-2/3">
-                <div class="prose prose-lg max-w-none">
+                <div class="prose prose-lg max-w-none mb-12">
                     {{ service.full_description|safe }}
                 </div>
                 
-                <!-- Features List -->
-                {% if service.features %}
+                <!-- Features List - FIXED VERSION -->
                 <div class="mt-12">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6">Key Features</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {% for feature in service.features %}
+                        
+                        {% if service.name == "Complete Conference Planning" %}
+                            {% set feature_items = [
+                                "Dedicated project manager",
+                                "Venue sourcing and negotiation", 
+                                "Speaker management",
+                                "Registration platform",
+                                "Marketing support",
+                                "On-site coordination",
+                                "Post-event reporting"
+                            ] %}
+                        {% elif service.name == "Basic Conference Setup" %}
+                            {% set feature_items = [
+                                "16x12x1.5 ft stage setup",
+                                "Hand & collar microphones",
+                                "Projector & moveable screen",
+                                "Basic PA system with 2 tops",
+                                "16x8 ft stage backdrop",
+                                "Suitable for 50 guests",
+                                "Indoor venue setup",
+                                "Professional audio-visual equipment"
+                            ] %}
+                        {% elif service.name == "Medical Conference Organization" %}
+                            {% set feature_items = [
+                                "CME accreditation support",
+                                "Medical expert speakers",
+                                "Live surgery streaming",
+                                "Medical exhibition management",
+                                "Pharmaceutical compliance",
+                                "200+ events organized",
+                                "Healthcare networking",
+                                "Medical education content"
+                            ] %}
+                        {% elif service.name == "Virtual Conference Platform" %}
+                            {% set feature_items = [
+                                "HD live streaming",
+                                "Interactive Q&A",
+                                "Virtual networking",
+                                "Digital exhibitions",
+                                "Multi-session support",
+                                "Analytics dashboard",
+                                "Mobile app",
+                                "Hybrid capabilities"
+                            ] %}
+                        {% elif service.name == "Bollywood Theme Event" %}
+                            {% set feature_items = [
+                                "Movie reel entrance arch",
+                                "Red carpet with celebrity cutouts",
+                                "LED pathway décor",
+                                "Magic mirror photo booth",
+                                "Bollywood themed furniture",
+                                "Professional stage setup",
+                                "Themed food & bar counters",
+                                "Professional sound & lighting",
+                                "Up to 300 guests",
+                                "Indoor/outdoor flexibility"
+                            ] %}
+                        {% elif service.name == "James Bond Theme Event" %}
+                            {% set feature_items = [
+                                "Limousine entrance display",
+                                "3D Bond character cutouts",
+                                "GOBO projections",
+                                "Foreign hostess service",
+                                "LED backdrop stage",
+                                "Premium JBL-Vertec sound",
+                                "Professional lighting design",
+                                "VIP red carpet experience",
+                                "Luxury lounge setup",
+                                "Casino gaming options"
+                            ] %}
+                        {% else %}
+                            {% set feature_items = [
+                                "Professional event planning",
+                                "Experienced team coordination",
+                                "Complete setup and logistics",
+                                "On-site support during event",
+                                "Post-event reporting",
+                                "Budget optimization",
+                                "Quality assurance",
+                                "24/7 customer support"
+                            ] %}
+                        {% endif %}
+                        
+                        {% for feature in feature_items %}
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mr-3 mt-1">
                                 <i class="fas fa-check-circle text-qubix-blue text-xl"></i>
@@ -45,47 +134,55 @@
                         {% endfor %}
                     </div>
                 </div>
-                {% endif %}
                 
-                <!-- Gallery -->
-                {% if service.gallery_images %}
-                <div class="mt-12">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Gallery</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {% for image in service.gallery_images %}
-                        <a href="{{ image }}" class="gallery-item">
-                            <img src="{{ image }}" 
-                                 alt="{{ service.name }}" 
-                                 class="rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-48 object-cover">
-                        </a>
-                        {% endfor %}
+                <!-- Additional Service Information -->
+                <div class="mt-12 bg-gray-50 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Why Choose This Service?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Professional Excellence</h4>
+                            <p class="text-gray-600 text-sm">Our experienced team ensures every detail is handled with precision and professionalism.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Customized Solutions</h4>
+                            <p class="text-gray-600 text-sm">We tailor our services to meet your specific requirements and budget.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">End-to-End Support</h4>
+                            <p class="text-gray-600 text-sm">From planning to execution, we provide comprehensive support throughout your event.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Proven Track Record</h4>
+                            <p class="text-gray-600 text-sm">With 1600+ successful events, we have the experience to make your event exceptional.</p>
+                        </div>
                     </div>
                 </div>
-                {% endif %}
             </div>
             
             <!-- Sidebar -->
             <div class="lg:w-1/3">
                 <!-- Quote Request Form -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 mb-8">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 mb-8 sticky top-8">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Request a Quote</h3>
+                    <p class="text-gray-600 text-sm mb-4">Get a personalized quote for {{ service.name }}</p>
+                    
                     <form id="quote-form" class="space-y-4">
                         <input type="hidden" name="service_id" value="{{ service.id }}">
                         
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name*</label>
                             <input type="text" id="name" name="name" required
                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
                         </div>
                         
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
                             <input type="email" id="email" name="email" required
                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
                         </div>
                         
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone*</label>
                             <input type="tel" id="phone" name="phone" required
                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
                         </div>
@@ -97,8 +194,9 @@
                         </div>
                         
                         <div>
-                            <label for="requirements" class="block text-sm font-medium text-gray-700 mb-1">Requirements</label>
-                            <textarea id="requirements" name="requirements" rows="4"
+                            <label for="requirements" class="block text-sm font-medium text-gray-700 mb-1">Requirements*</label>
+                            <textarea id="requirements" name="requirements" rows="4" required
+                                      placeholder="Tell us about your event requirements..."
                                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue"></textarea>
                         </div>
                         
@@ -111,22 +209,26 @@
                 </div>
                 
                 <!-- Contact Info -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 mb-8">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Us</h3>
+                <div class="bg-qubix-blue text-white rounded-lg p-6 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Need Immediate Help?</h3>
                     <div class="space-y-3">
                         <p class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-qubix-blue"></i>
-                            <a href="tel:+919899339005" class="text-gray-700 hover:text-qubix-blue">+91-98993-39005</a>
+                            <i class="fas fa-phone mr-3"></i>
+                            <a href="tel:+919899339005" class="hover:text-gray-200">+91-98993-39005</a>
                         </p>
                         <p class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-qubix-blue"></i>
-                            <a href="mailto:info@qubixsolutions.in" class="text-gray-700 hover:text-qubix-blue">info@qubixsolutions.in</a>
+                            <i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:info@qubixsolutions.in" class="hover:text-gray-200">info@qubixsolutions.in</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span class="text-sm">Mon-Fri: 9AM-7PM</span>
                         </p>
                     </div>
                 </div>
                 
                 <!-- Related Services -->
-                {% if related_services %}
+                {% if related_services and related_services|length > 0 %}
                 <div class="bg-gray-50 rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Related Services</h3>
                     <ul class="space-y-4">
@@ -134,13 +236,16 @@
                         <li>
                             <a href="/services/{{ related.slug }}" class="flex items-center group">
                                 <div class="flex-shrink-0 mr-3">
-                                    <img src="{{ related.image_url or request.url_for('static', path='images/service-placeholder.jpg') }}" 
+                                    <img src="https://via.placeholder.com/64x64/2c5aa0/ffffff?text={{ related.name[:2]|upper }}" 
                                          alt="{{ related.name }}" 
                                          class="w-16 h-16 object-cover rounded-md">
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-gray-800 group-hover:text-qubix-blue transition-colors">{{ related.name }}</h4>
-                                    <p class="text-sm text-gray-500">{{ related.short_description|truncate(50) }}</p>
+                                    <p class="text-sm text-gray-500">{{ related.short_description[:50] }}...</p>
+                                    {% if related.price_range %}
+                                    <p class="text-xs text-qubix-blue font-medium">{{ related.price_range }}</p>
+                                    {% endif %}
                                 </div>
                             </a>
                         </li>
@@ -158,15 +263,18 @@
     <div class="container mx-auto px-4">
         <div class="bg-qubix-blue text-white rounded-lg shadow-lg p-8 lg:p-12">
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Need more information?</h3>
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Ready to Get Started?</h3>
                     <p class="text-gray-100">
-                        Our team is ready to assist you with detailed information and customized solutions.
+                        Contact our expert team for detailed information and customized solutions.
                     </p>
                 </div>
-                <div class="mt-6 md:mt-0">
-                    <a href="/contact" class="bg-white text-qubix-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                    <a href="/contact" class="bg-white text-qubix-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
                         Contact Us
+                    </a>
+                    <a href="tel:+919899339005" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-qubix-blue transition-colors text-center">
+                        Call Now
                     </a>
                 </div>
             </div>
@@ -180,33 +288,52 @@
 document.addEventListener('DOMContentLoaded', function() {
     const quoteForm = document.getElementById('quote-form');
     
-    quoteForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const formData = new FormData(quoteForm);
-        const data = Object.fromEntries(formData.entries());
-        
-        fetch('/api/quote', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                alert(result.message);
-                quoteForm.reset();
-            } else {
-                alert('Error: ' + result.detail);
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            
+            try {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Convert service_id to integer
+                if (data.service_id) {
+                    data.service_id = parseInt(data.service_id);
+                }
+                
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('Quote request sent successfully! We\'ll get back to you within 24 hours.');
+                    this.reset();
+                } else {
+                    throw new Error(result.detail || 'Failed to send quote request');
+                }
+            } catch (error) {
+                console.error('Quote form error:', error);
+                alert('Sorry, there was an error sending your request. Please try again or call us directly.');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
             }
-        })
-        .catch(error => {
-            alert('There was an error submitting your request. Please try again.');
-            console.error('Error:', error);
         });
-    });
+    }
 });
 </script>
 {% endblock %}

@@ -383,46 +383,11 @@
 
 {% block scripts %}
 <script>
-// Initialize categories safely - using the pre-converted dictionary data
-let categories = [];
-try {
-    {% if categories %}
-        categories = {{ categories | tojson | safe }};
-        console.log('✓ Categories loaded:', categories.length, 'items');
-    {% else %}
-        categories = [];
-        console.log('⚠️ No categories available');
-    {% endif %}
-} catch (error) {
-    console.error('❌ Error loading categories:', error);
-    categories = [];
-}
-
-// Initialize featured services safely  
-let featuredServices = [];
-try {
-    {% if featured_services_json %}
-        featuredServices = {{ featured_services_json | tojson | safe }};
-        console.log('✓ Featured services loaded:', featuredServices.length, 'items');
-    {% else %}
-        featuredServices = [];
-        console.log('⚠️ No featured services available');
-    {% endif %}
-} catch (error) {
-    console.error('❌ Error loading featured services:', error);
-    featuredServices = [];
-}
-
-// Initialize page functionality
+// Initialize page data safely - no longer using JSON in template
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🏠 Qubix Events homepage loaded successfully');
-    console.log('📊 Data summary:', {
-        categories: categories.length,
-        featuredServices: featuredServices.length,
-        title: '{{ title }}'
-    });
     
-    // Initialize any homepage-specific functionality here
+    // Initialize counter animations
     initializeCounters();
 });
 

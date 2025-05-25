@@ -1,0 +1,349 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Section 1: Services Hero -->
+<section class="bg-gradient-to-r from-qubix-dark to-qubix-blue text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Event Management Services</h1>
+            <p class="text-xl mb-8 text-gray-100">
+                Comprehensive event planning and management solutions for conferences, corporate events, 
+                virtual platforms, and themed experiences across India.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#services-grid" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Browse Services
+                </a>
+                <a href="/contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-qubix-blue transition-colors">
+                    Get Custom Quote
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Service Categories -->
+<section class="py-16 bg-white" id="services-grid">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Service Categories</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our diverse range of professional event management services
+            </p>
+        </div>
+        
+        {% if categories and categories|length > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {% for category in categories %}
+            <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 group">
+                <div class="service-icon mb-6">
+                    <i class="{{ category.icon or 'fas fa-star' }} text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">{{ category.name }}</h3>
+                <p class="text-gray-600 mb-6">{{ category.description }}</p>
+                <a href="#category-{{ category.slug }}" class="text-qubix-blue font-semibold hover:text-qubix-dark transition-colors group-hover:underline">
+                    View Services →
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Section 3: Featured Services -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Services</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our most popular and comprehensive event management solutions
+            </p>
+        </div>
+        
+        {% if featured_services and featured_services|length > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for service in featured_services %}
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <img src="{{ service.image_url or 'https://via.placeholder.com/400x250/2c5aa0/ffffff?text=' + (service.name|replace(' ', '+')) }}" 
+                     alt="{{ service.name }}" 
+                     class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    {% if service.category %}
+                    <span class="bg-qubix-blue bg-opacity-10 text-qubix-blue px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">
+                        {{ service.category.name }}
+                    </span>
+                    {% endif %}
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">{{ service.name }}</h3>
+                    <p class="text-gray-600 mb-4">{{ service.short_description }}</p>
+                    {% if service.price_range %}
+                    <p class="text-qubix-blue font-semibold mb-4">{{ service.price_range }}</p>
+                    {% endif %}
+                    <div class="flex justify-between items-center">
+                        <a href="/services/{{ service.slug }}" class="text-qubix-blue font-semibold hover:text-qubix-dark transition-colors">
+                            Learn More →
+                        </a>
+                        <button onclick="openQuoteModal('{{ service.id }}')" 
+                                class="bg-qubix-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-qubix-dark transition-colors">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Fallback content if no services -->
+        <div class="text-center py-12">
+            <i class="fas fa-calendar-alt text-6xl text-gray-300 mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-600 mb-2">Services Coming Soon</h3>
+            <p class="text-gray-500 mb-6">We're updating our service catalog. Please contact us for information.</p>
+            <a href="/contact" class="bg-qubix-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-qubix-dark transition-colors">
+                Contact Us
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Section 4: Service Details by Category -->
+{% if categories and categories|length > 0 %}
+{% for category in categories %}
+<section class="py-16 bg-white" id="category-{{ category.slug }}">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ category.name }}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ category.description }}</p>
+        </div>
+        
+        {% set category_services = [] %}
+        {% for service in featured_services %}
+            {% if service.category_id == category.id %}
+                {% set _ = category_services.append(service) %}
+            {% endif %}
+        {% endfor %}
+        
+        {% if category_services|length > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for service in category_services %}
+            <div class="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">{{ service.name }}</h3>
+                <p class="text-gray-600 mb-4">{{ service.short_description }}</p>
+                {% if service.price_range %}
+                <p class="text-qubix-blue font-semibold mb-4">Starting from {{ service.price_range }}</p>
+                {% endif %}
+                <div class="flex space-x-4">
+                    <a href="/services/{{ service.slug }}" class="text-qubix-blue font-semibold hover:text-qubix-dark transition-colors">
+                        View Details
+                    </a>
+                    <button onclick="openQuoteModal('{{ service.id }}')" class="text-gray-500 hover:text-qubix-blue transition-colors">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-8">
+            <p class="text-gray-500">Services in this category are being updated. Please contact us for more information.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endfor %}
+{% endif %}
+
+<!-- Section 5: Why Choose Our Services -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Qubix Events?</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience the difference with our professional event management services
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="service-icon mb-4 mx-auto">
+                    <i class="fas fa-award text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">15+ Years Experience</h3>
+                <p class="text-gray-600 text-sm">Proven track record in event management</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="service-icon mb-4 mx-auto">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">1600+ Events</h3>
+                <p class="text-gray-600 text-sm">Successfully organized across India</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="service-icon mb-4 mx-auto">
+                    <i class="fas fa-map-marker-alt text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Pan-India Presence</h3>
+                <p class="text-gray-600 text-sm">Offices in Delhi, Kolkata & Bangalore</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="service-icon mb-4 mx-auto">
+                    <i class="fas fa-headset text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">24/7 Support</h3>
+                <p class="text-gray-600 text-sm">Dedicated support throughout your event</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Call to Action -->
+<section class="py-16 bg-qubix-blue text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Plan Your Event?</h2>
+            <p class="text-xl text-gray-100 mb-8">
+                Contact our expert team today for a personalized consultation and detailed quote.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="/contact" class="bg-white text-qubix-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Contact Us Today
+                </a>
+                <a href="tel:+919899339005" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-qubix-blue transition-colors">
+                    Call: +91-98993-39005
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Modal -->
+<div id="quote-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Quick Quote Request</h3>
+                <button onclick="closeQuoteModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="quick-quote-form" class="space-y-4">
+                <input type="hidden" id="modal-service-id" name="service_id">
+                
+                <div>
+                    <label for="modal-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" id="modal-name" name="name" required
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                </div>
+                
+                <div>
+                    <label for="modal-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="modal-email" name="email" required
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                </div>
+                
+                <div>
+                    <label for="modal-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                    <input type="tel" id="modal-phone" name="phone" required
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue">
+                </div>
+                
+                <div>
+                    <label for="modal-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea id="modal-message" name="message" rows="3" required
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-qubix-blue focus:border-qubix-blue"></textarea>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button type="button" onclick="closeQuoteModal()" 
+                            class="flex-1 bg-gray-200 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors">
+                        Cancel
+                    </button>
+                    <button type="submit" 
+                            class="flex-1 bg-qubix-blue text-white py-2 px-4 rounded-md hover:bg-qubix-dark transition-colors">
+                        Send Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Quote Modal Functions
+function openQuoteModal(serviceId) {
+    document.getElementById('modal-service-id').value = serviceId;
+    document.getElementById('quote-modal').classList.remove('hidden');
+    document.getElementById('quote-modal').classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeQuoteModal() {
+    document.getElementById('quote-modal').classList.add('hidden');
+    document.getElementById('quote-modal').classList.remove('flex');
+    document.body.style.overflow = 'auto';
+    document.getElementById('quick-quote-form').reset();
+}
+
+// Quick Quote Form Handler
+document.getElementById('quick-quote-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    try {
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Convert service_id to integer
+        if (data.service_id) {
+            data.service_id = parseInt(data.service_id);
+        }
+        
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            alert('Quote request sent successfully! We\'ll get back to you within 24 hours.');
+            closeQuoteModal();
+        } else {
+            throw new Error(result.detail || 'Failed to send quote request');
+        }
+    } catch (error) {
+        console.error('Quote form error:', error);
+        alert('Sorry, there was an error sending your request. Please try again or call us directly.');
+    } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+});
+
+// Close modal on escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeQuoteModal();
+    }
+});
+</script>
+{% endblock %}

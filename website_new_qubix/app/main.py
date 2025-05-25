@@ -9,6 +9,9 @@ import uvicorn
 import os
 from pathlib import Path
 import logging
+import json
+from datetime import datetime
+from decimal import Decimal
 
 # Section 2: Import custom modules
 from app.routers import pages, api
@@ -37,10 +40,36 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Section 6: Static Files and Templates Setup
+# Section 6: Static Files and Templates Setup with Custom Filters
 print("Setting up static files and templates...")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
+
+# Add custom JSON filter to templates
+def from_json_filter(value):
+    """Custom filter to parse JSON strings in templates"""
+    if isinstance(value, str):
+        try:
+            return json.loads(value)
+        except (json.JSONDecodeError, TypeError):
+            return []
+    elif isinstance(value, list):
+        return value
+    else:
+        return []
+
+def safe_truncate_filter(value, length=50):
+    """Safely truncate text"""
+    if not value:
+        return ""
+    if len(str(value)) <= length:
+        return str(value)
+    return str(value)[:length] + "..."
+
+# Register custom filters
+templates.env.filters['from_json'] = from_json_filter
+templates.env.filters['safe_truncate'] = safe_truncate_filter
+
 print("✓ Static files and templates configured")
 
 # Section 7: Database initialization
@@ -69,22 +98,52 @@ app.include_router(pages.router, tags=["pages"])
 app.include_router(api.router, prefix="/api", tags=["api"])
 print("✓ Routers configured")
 
-# Section 9: Helper function to convert SQLAlchemy objects to dict
-def model_to_dict(model):
-    """Convert SQLAlchemy model to dictionary for JSON serialization"""
+# Section 9: Custom JSON Encoder for SQLAlchemy objects
+class CustomJSONEncoder(json.JSONEncoder):
+    """Custom JSON encoder to handle SQLAlchemy objects and datetime"""
+    def default(self, obj):
+        if hasattr(obj, '__dict__'):
+            # Handle SQLAlchemy objects
+            result = {}
+            for key, value in obj.__dict__.items():
+                if not key.startswith('_'):  # Skip SQLAlchemy internal attributes
+                    if isinstance(value, datetime):
+                        result[key] = value.isoformat()
+                    elif isinstance(value, Decimal):
+                        result[key] = float(value)
+                    elif hasattr(value, '__dict__'):
+                        # Skip nested objects to avoid circular references
+                        continue
+                    else:
+                        result[key] = value
+            return result
+        elif isinstance(obj, datetime):
+            return obj.isoformat()
+        elif isinstance(obj, Decimal):
+            return float(obj)
+        return super().default(obj)
+
+def safe_serialize_model(model):
+    """Safely serialize SQLAlchemy model to dictionary"""
     if model is None:
         return None
     
     result = {}
     for column in model.__table__.columns:
-        result[column.name] = getattr(model, column.name)
+        value = getattr(model, column.name)
+        if isinstance(value, datetime):
+            result[column.name] = value.isoformat()
+        elif isinstance(value, Decimal):
+            result[column.name] = float(value)
+        else:
+            result[column.name] = value
     return result
 
-def models_to_dict_list(models):
-    """Convert list of SQLAlchemy models to list of dictionaries"""
+def safe_serialize_models_list(models):
+    """Safely serialize list of SQLAlchemy models"""
     if not models:
         return []
-    return [model_to_dict(model) for model in models]
+    return [safe_serialize_model(model) for model in models]
 
 # Section 10: Root endpoint with SEO optimization and debug output
 @app.get("/", response_class=HTMLResponse)
@@ -118,11 +177,11 @@ async def homepage(request: Request, db: Session = Depends(get_db)):
         
         # Convert SQLAlchemy objects to dictionaries for JSON serialization
         print("🔄 Converting models to dictionaries...")
-        featured_services_dict = models_to_dict_list(featured_services)
-        categories_dict = models_to_dict_list(categories)
+        featured_services_dict = safe_serialize_models_list(featured_services)
+        categories_dict = safe_serialize_models_list(categories)
         print("✓ Models converted successfully")
         
-        # Build context
+        # Build context - DO NOT include JSON serialized data in template context
         print("🏗️ Building template context...")
         context = {
             "request": request,
@@ -132,9 +191,11 @@ async def homepage(request: Request, db: Session = Depends(get_db)):
             "canonical_url": f"{settings.BASE_URL}/",
             "og_image": f"{settings.BASE_URL}/static/images/qubix-og-image.jpg",
             "schema_data": seo_data["schema_data"],
-            "featured_services": featured_services,  # Keep original for template
-            "categories": categories_dict,  # Use dict version for JSON
-            "featured_services_json": featured_services_dict  # For any JSON needs
+            "featured_services": featured_services,  # Keep original SQLAlchemy objects for template
+            "categories": categories,  # Keep original SQLAlchemy objects for template
+            # Only pass JSON-safe data if needed for JavaScript
+            "featured_services_json": json.dumps(featured_services_dict, cls=CustomJSONEncoder),
+            "categories_json": json.dumps(categories_dict, cls=CustomJSONEncoder)
         }
         print("✓ Context built successfully")
         
@@ -156,7 +217,8 @@ async def homepage(request: Request, db: Session = Depends(get_db)):
             "schema_data": "{}",
             "featured_services": [],
             "categories": [],
-            "featured_services_json": []
+            "featured_services_json": "[]",
+            "categories_json": "[]"
         }
         return templates.TemplateResponse("index.html", fallback_context)
 
